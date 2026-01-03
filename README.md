@@ -53,7 +53,7 @@ This repo is structured progressively. Each chapter includes explanations, code 
 
 | Chapter | Topic | Focus Areas | Status |
 | :---: | :--- | :--- | :---: |
-| **01** | **Getting Started** | Mindset, Daily Habits, Setup | ✅ Ready |
+| **01** | [**Getting Started**](./01-getting-started.md) | Mindset, Daily Habits, Setup | ✅ Ready |
 | **02** | **Environment Setup** | VS Code, Terminal, Git Config | 🚧 WIP |
 | **03** | **Programming Basics** | Variables, Logic, Python/JS intro | ⏳ Pending |
 | **04** | **Data Structures** | Arrays, Trees, Big O Notation | ⏳ Pending |
