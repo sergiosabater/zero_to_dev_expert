@@ -6,7 +6,7 @@
 ![Start Line](https://media.giphy.com/media/l0HlHFRbmaZtBRhXG/giphy.gif)
 *(Ready? Set? Let's go!)*
 
-[🔙 Back to Roadmap](/README.md) • [Next Chapter 🔜](../02-Environment/README.md)
+[🔙 Back to Roadmap](/README.md) • [Next Chapter 🔜](./02-environment-setup.md)
 
 </div>
 
