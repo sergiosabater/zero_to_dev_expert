@@ -8,7 +8,7 @@
 
 > *"Code is not magic. It's structured thinking."*
 
-[🔙 Back to Chapter 02](../02-EnvironmentSetup/README.md)
+[🔙 Back to Chapter 02](./02-environment-setup.md)
 
 </div>
 
