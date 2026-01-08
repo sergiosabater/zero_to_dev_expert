@@ -8,7 +8,7 @@
 
 > *"Code without version control is like writing without an undo button."*
 
-[🔙 Back to Chapter 04](../04-DataStructures/README.md)
+[🔙 Back to Chapter 04](./04-data-structures.md)
 
 </div>
 
