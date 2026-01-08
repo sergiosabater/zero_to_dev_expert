@@ -210,6 +210,6 @@ Code is no longer intimidating.
 
 ---
 
-➡️ [Continue to Chapter 04 · Data Structures](../04-DataStructures/README.md)
+➡️ [Continue to Chapter 04 · Data Structures](./04-data-structures.md)
 
 </div>
