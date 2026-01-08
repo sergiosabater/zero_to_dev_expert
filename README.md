@@ -57,7 +57,7 @@ This repo is structured progressively. Each chapter includes explanations, code 
 | **02** | [**Environment Setup**](./02-environment-setup.md) | VS Code, Terminal, Git Config | ✅ Ready | 04-data-structures.md
 | **03** | [**Programming Basics**](./03-programming-basics.md) | Variables, Logic, Python/JS intro | ✅ Ready |
 | **04** | [**Data Structures**](./04-data-structures.md) | Arrays, Trees, Big O Notation | ✅ Ready |
-| **05** | **Version Control** | Git branching, GitHub Collaboration | ⏳ Pending |
+| **05** | [**Version Control**](./05-version-control.md) | Git branching, GitHub Collaboration | ✅ Ready |
 
 ### Phase 2: Building & Architecture 🏗️
 
