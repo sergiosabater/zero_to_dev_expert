@@ -7,7 +7,7 @@
 
 > *Time to build your command center.*
 
-[🔙 Back to Chapter 01](/01-getting-started.md) &nbsp;•&nbsp; [Next Chapter 🔜](../03-ProgrammingBasics/README.md)
+[🔙 Back to Chapter 01](/01-getting-started.md) &nbsp;•&nbsp; [Next Chapter 🔜](./03-programming-basics.md)
 
 </div>
 
