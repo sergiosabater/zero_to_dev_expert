@@ -8,7 +8,7 @@
 
 > *"Good code works. Great code scales."*
 
-[🔙 Back to Chapter 03](../03-ProgrammingBasics/README.md)
+[🔙 Back to Chapter 03](./03-programming-basics.md)
 
 </div>
 
