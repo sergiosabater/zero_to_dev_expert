@@ -3,8 +3,6 @@
 # 🚀 ZeroToDevExpert
 ### From Beginner to Pro Developer
 
-![Banner](https://via.placeholder.com/1200x350?text=Zero+To+Dev+Expert+Roadmap)
-*(Note: Replace the image above with a real banner design)*
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
