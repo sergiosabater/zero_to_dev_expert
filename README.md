@@ -114,7 +114,5 @@ It helps others find this guide and motivates us to keep updating the chapters.
 
 <div align="center">
 
-*Last updated: January 2026*
-*License: MIT*
 
 </div>
