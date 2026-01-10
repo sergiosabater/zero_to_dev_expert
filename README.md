@@ -61,7 +61,7 @@ This repo is structured progressively. Each chapter includes explanations, code 
 
 | Chapter | Topic | Focus Areas | Status |
 | :---: | :--- | :--- | :---: |
-| **06** | **Web Dev Basics** | HTML5, CSS3, DOM Manipulation | ⏳ Pending |
+| **06** | [**Web Dev Basics**](./06-web-dev-basics.md) | HTML5, CSS3, DOM Manipulation | ✅ Ready |
 | **07** | **Data Management** | SQL, NoSQL, CRUD Operations | ⏳ Pending |
 | **08** | **Backend Dev** | APIs, Auth, Node.js/Django | ⏳ Pending |
 | **09** | **Frontend Dev** | React/Vue, UX Principles | ⏳ Pending |
