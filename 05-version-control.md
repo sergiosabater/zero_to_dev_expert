@@ -355,6 +355,6 @@ You're no longer coding alone.
 
 ---
 
-➡️ [Continue to Chapter 06 · Algorithms & Problem Solving](../06-Algorithms/README.md)
+➡️ [Continue to Chapter 06 · Web Dev Basics](./06-web-dev-basics.md)
 
 </div>
