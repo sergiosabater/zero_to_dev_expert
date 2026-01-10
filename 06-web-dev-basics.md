@@ -8,7 +8,7 @@
 
 > *"Every website you've ever visited is just HTML, CSS, and JavaScript working together."*
 
-[🔙 Back to Chapter 05](../05-VersionControl/README.md)
+[🔙 Back to Chapter 05](./05-version-control.md)
 
 </div>
 
