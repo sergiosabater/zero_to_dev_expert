@@ -589,6 +589,6 @@ You're no longer just a coder.
 
 ---
 
-➡️ [Continue to Chapter 07 · JavaScript Deep Dive](../07-JavaScript/README.md)
+➡️ [Continue to Chapter 07 · Data Management](./07-data-management.md)
 
 </div>
