@@ -213,6 +213,6 @@ You're no longer just writing code —
 
 ---
 
-➡️ [Continue to Chapter 05 · Algorithms & Problem Solving](./05-version-control.md)
+➡️ [Continue to Chapter 05 · Version Control](./05-version-control.md)
 
 </div>
