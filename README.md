@@ -52,7 +52,7 @@ This repo is structured progressively. Each chapter includes explanations, code 
 | Chapter | Topic | Focus Areas | Status |
 | :---: | :--- | :--- | :---: |
 | **01** | [**Getting Started**](./01-getting-started.md) | Mindset, Daily Habits, Setup | ✅ Ready |
-| **02** | [**Environment Setup**](./02-environment-setup.md) | VS Code, Terminal, Git Config | ✅ Ready | 04-data-structures.md
+| **02** | [**Environment Setup**](./02-environment-setup.md) | VS Code, Terminal, Git Config | ✅ Ready |
 | **03** | [**Programming Basics**](./03-programming-basics.md) | Variables, Logic, Python/JS intro | ✅ Ready |
 | **04** | [**Data Structures**](./04-data-structures.md) | Arrays, Trees, Big O Notation | ✅ Ready |
 | **05** | [**Version Control**](./05-version-control.md) | Git branching, GitHub Collaboration | ✅ Ready |
@@ -62,7 +62,7 @@ This repo is structured progressively. Each chapter includes explanations, code 
 | Chapter | Topic | Focus Areas | Status |
 | :---: | :--- | :--- | :---: |
 | **06** | [**Web Dev Basics**](./06-web-dev-basics.md) | HTML5, CSS3, DOM Manipulation | ✅ Ready |
-| **07** | **Data Management** | SQL, NoSQL, CRUD Operations | ⏳ Pending |
+| **07** | [**Data Management**](./07-data-management.md) | SQL, NoSQL, CRUD Operations | ✅ Ready |
 | **08** | **Backend Dev** | APIs, Auth, Node.js/Django | ⏳ Pending |
 | **09** | **Frontend Dev** | React/Vue, UX Principles | ⏳ Pending |
 | **10** | **Full-Stack** | Integration, Deployment (Vercel/Heroku) | ⏳ Pending |
