@@ -6,15 +6,15 @@
 
 ---
 
-## 🚀 ¿Qué hace un Frontend Developer?
+## 🚀 What does a Frontend Developer do?
 
-Un **Frontend Developer** es el responsable de construir la **experiencia visual e interactiva** de una aplicación web. Es quien traduce las ideas, diseños y requisitos de negocio en **interfaces usables, accesibles y atractivas**.
+A **Frontend Developer** is responsible for building the **visual and interactive experience** of a web application. They translate ideas, designs, and business requirements into **usable, accessible, and attractive interfaces**.
 
-Su trabajo se sitúa en la intersección entre:
+Their work sits at the intersection of:
 
-* 🧠 **Lógica de aplicación**
-* 🎨 **Diseño visual**
-* 👤 **Experiencia de usuario (UX)**
+* 🧠 **Application logic**
+* 🎨 **Visual design**
+* 👤 **User Experience (UX)**
 
 ---
 
@@ -22,20 +22,20 @@ Su trabajo se sitúa en la intersección entre:
 
 ![React](https://media.giphy.com/media/eNAsjO55tPbgaor7ma/giphy.gif)
 
-**React** es una librería desarrollada por Meta (Facebook) para crear interfaces de usuario basadas en **componentes reutilizables**.
+**React** is a library developed by Meta (Facebook) for building user interfaces based on **reusable components**.
 
-### 🔹 Características clave
+### 🔹 Key features
 
-* Arquitectura basada en **componentes**
-* Uso de **Virtual DOM** para alto rendimiento
-* Flujo de datos **unidireccional**
-* Ecosistema enorme (Next.js, Redux, Zustand, etc.)
+* **Component-based** architecture
+* **Virtual DOM** for high performance
+* **Unidirectional** data flow
+* Huge ecosystem (Next.js, Redux, Zustand, etc.)
 
-### 🔹 ¿Cuándo usar React?
+### 🔹 When should you use React?
 
-* Aplicaciones grandes y escalables
-* Proyectos con mucha interacción
-* Equipos que valoran flexibilidad y control
+* Large and scalable applications
+* Projects with high interactivity
+* Teams that value flexibility and control
 
 ---
 
@@ -43,70 +43,10 @@ Su trabajo se sitúa en la intersección entre:
 
 ![Vue](https://media.giphy.com/media/kH1DBkPNyZPOk0BxrM/giphy.gif)
 
-**Vue** es un framework progresivo que destaca por su **simplicidad** y curva de aprendizaje suave.
+**Vue** is a progressive framework that stands out for its **simplicity** and gentle learning curve.
 
-### 🔹 Características clave
+### 🔹 Key features
 
-* Sintaxis clara y expresiva
+* Clear and expressive syntax
 * Two-way data binding
-* Componentes muy legibles
-* Excelente documentación oficial
-
-### 🔹 ¿Cuándo usar Vue?
-
-* Proyectos medianos
-* Equipos pequeños
-* Cuando se busca rapidez y claridad
-
----
-
-## 🧭 UX Principles (User Experience)
-
-![UX](https://media.giphy.com/media/26tn33aiTi1jkl6H6/giphy.gif)
-
-Un buen frontend no es solo bonito: **debe ser intuitivo**. Aquí entran en juego los principios de UX.
-
-### ✨ Principios fundamentales
-
-* **Usabilidad**: fácil de usar sin pensar
-* **Consistencia**: mismos patrones, mismas reglas
-* **Feedback**: el sistema responde a las acciones del usuario
-* **Accesibilidad**: usable para todas las personas
-* **Simplicidad**: menos es más
-
-> *"Un buen diseño es invisible"*
-
----
-
-## 🔧 Herramientas habituales
-
-* 🎨 Figma / Sketch
-* 🧪 Storybook
-* 🧩 Tailwind / CSS Modules / Styled Components
-* 🧠 Lighthouse
-* ♿ Testing de accesibilidad
-
----
-
-## 🧩 React vs Vue
-
-| Aspecto              | React    | Vue        |
-| -------------------- | -------- | ---------- |
-| Curva de aprendizaje | Media    | Baja       |
-| Flexibilidad         | Muy alta | Alta       |
-| Ecosistema           | Enorme   | Muy sólido |
-| Sintaxis             | JSX      | HTML-like  |
-
----
-
-## 🏁 Conclusión
-
-Un **Frontend Developer moderno** no solo domina React o Vue, sino que entiende profundamente **cómo piensan los usuarios**.
-
-La combinación de **frameworks potentes** + **buenos principios de UX** es lo que transforma una web funcional en una experiencia memorable.
-
-![Success](https://media.giphy.com/media/3o7qE1YN7aBOFPRw8E/giphy.gif)
-
----
-
-✨ *Frontend no es solo código, es experiencia.*
+* Highly readable c
