@@ -64,7 +64,7 @@ This repo is structured progressively. Each chapter includes explanations, code 
 | **06** | [**Web Dev Basics**](./06-web-dev-basics.md) | HTML5, CSS3, DOM Manipulation | ✅ Ready |
 | **07** | [**Data Management**](./07-data-management.md) | SQL, NoSQL, CRUD Operations | ✅ Ready |
 | **08** | [**Backend Dev**](./08-backend-dev.md) | APIs, Auth, Node.js/Django | ✅ Ready |
-| **09** | **Frontend Dev** | React/Vue, UX Principles | ⏳ Pending |
+| **09** | [**Frontend Dev**](./09-front-end-dev.md) | React/Vue, UX Principles | ✅ Ready |
 | **10** | **Full-Stack** | Integration, Deployment (Vercel/Heroku) | ⏳ Pending |
 
 ### Phase 3: The Future (AI & Mastery) 🚀
