@@ -72,7 +72,7 @@ This repo is structured progressively. Each chapter includes explanations, code 
 | Chapter | Topic | Focus Areas | Status |
 | :---: | :--- | :--- | :---: |
 | **11** | [**AI Integration**](./11-AI-integration.md) | LLMs, Agents, TensorFlow Basics  | ✅ Ready |
-| **12** | **Code Quality** | Clean Code, Testing, Refactoring | ⏳ Pending |
+| **12** | [**Code Quality**](./12-code-quality.md) | Clean Code, Testing, Refactoring  | ✅ Ready |
 | **13** | **Habits & Growth** | Pomodoro, Spaced Repetition, Burnout | ⏳ Pending |
 | **14** | **Projects** | Real-world Portfolio Building | ⏳ Pending |
 | **15** | **Career Launch** | Resumes, Networking, Freelancing | ⏳ Pending |
