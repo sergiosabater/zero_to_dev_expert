@@ -8,7 +8,7 @@
 
 > *"Code without version control is like writing without an undo button."*
 
-[🔙 Back to Chapter 04](./04-data-structures.md)
+[🔙 Back to Chapter 04](./04-data-structures.md) • [Next Chapter 🔜](./06-web-dev-basics.md)
 
 </div>
 
