@@ -8,7 +8,8 @@
 
 > *"Code is not magic. It's structured thinking."*
 
-[🔙 Back to Chapter 02](./02-environment-setup.md)
+[🔙 Back to Chapter 02](./02-environment-setup.md) • [Next Chapter 🔜](./04-data-structures.md)
+
 
 </div>
 
