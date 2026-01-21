@@ -10,8 +10,6 @@
 
 [🔙 Back to Chapter 05](./05-version-control.md) • [Next Chapter 🔜](./07-data-management.md)
 
-[🔙 Back to Chapter 05](./05-version-control.md)
-
 </div>
 
 ---
