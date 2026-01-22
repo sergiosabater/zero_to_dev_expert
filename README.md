@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🚀 ZeroToDevExpert
+# 🚀 Zero To Dev Expert
 ### From Beginner to Pro Developer
 
 
