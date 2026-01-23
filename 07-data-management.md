@@ -8,7 +8,7 @@
 
 > *"Data is the new oil. But unlike oil, data gets more valuable when you refine it properly."*
 
-[🔙 Back to Chapter 06](./06-web-dev-basics.md)
+[🔙 Back to Chapter 06](./06-web-dev-basics.md) • [Next Chapter 🔜](./08-backend-dev.md)
 
 </div>
 
