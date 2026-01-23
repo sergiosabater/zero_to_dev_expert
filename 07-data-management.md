@@ -522,6 +522,6 @@ You're no longer just storing data.
 
 ---
 
-➡️ [Continue to Chapter 08 · APIs & Integration](../08-APIs/README.md)
+➡️ [Continue to Chapter 08 · Backend Dev](./08-backend-dev.md)
 
 </div>
