@@ -8,7 +8,7 @@
 
 > *"Frontend is what users see. Backend is what makes it work."*
 
-[🔙 Back to Chapter 07](./07-data-management.md)
+[🔙 Back to Chapter 07](./07-data-management.md) • [Next Chapter 🔜](./09-front-end-dev.md)
 
 </div>
 
