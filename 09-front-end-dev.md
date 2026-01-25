@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🎨 Frontend Developer
+# 🎨 Chapter 09 · Frontend Developer
 
 ## React · Vue · UX Principles
 
