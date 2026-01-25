@@ -1,3 +1,5 @@
+<div align="center">
+
 # 🎨 Frontend Developer
 
 ## React · Vue · UX Principles
@@ -20,7 +22,10 @@ Their work sits at the intersection of:
 * 🎨 **Visual design**
 * 👤 **User Experience (UX)**
 
+</div>
+
 ---
+
 
 ## ⚛️ React
 
