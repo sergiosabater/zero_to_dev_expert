@@ -4,6 +4,10 @@
 
 ![Frontend Animation](https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif)
 
+
+[🔙 Back to Chapter 08](./08-backend-dev.md) • [Next Chapter 🔜](./10-full-stack.md)
+
+
 ---
 
 ## 🚀 What does a Frontend Developer do?
