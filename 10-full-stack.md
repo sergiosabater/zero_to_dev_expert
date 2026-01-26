@@ -8,7 +8,7 @@
 
 > *"Full-stack developers don't just build apps. They ship them to the world."*
 
-[🔙 Back to Chapter 09](./09-front-end-dev.md)
+[🔙 Back to Chapter 09](./09-front-end-dev.md) • [Next Chapter 🔜](./11-AI-integration.md)
 
 </div>
 
