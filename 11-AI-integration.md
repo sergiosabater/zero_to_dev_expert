@@ -8,7 +8,7 @@
 
 > *"AI is not replacing developers. Developers using AI are replacing developers not using AI."*
 
-[🔙 Back to Chapter 10](../10-FullStack/README.md)
+[🔙 Back to Chapter 10](./10-FullStack/README.md) • [Next Chapter 🔜](./12-code-quality.md)
 
 </div>
 
