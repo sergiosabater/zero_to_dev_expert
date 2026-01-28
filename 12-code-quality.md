@@ -8,7 +8,7 @@
 
 > *"Any fool can write code that a computer can understand. Good programmers write code that humans can understand."* — Martin Fowler
 
-[🔙 Back to Chapter 11](../11-AIIntegration/README.md)
+[🔙 Back to Chapter 11](./11-AI-integration.md) • [Next Chapter 🔜](./)
 
 </div>
 
