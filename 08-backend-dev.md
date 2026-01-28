@@ -653,6 +653,6 @@ You're no longer just building interfaces.
 
 ---
 
-➡️ [Continue to Chapter 09 · Testing & Debugging](../09-Testing/README.md)
+➡️ [Continue to Chapter 09 · Front End Development](./09-front-end-dev.md)
 
 </div>
