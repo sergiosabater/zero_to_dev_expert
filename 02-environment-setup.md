@@ -195,3 +195,6 @@ If a version number appears — success 🎉
 📸 Screenshot Challenge
 Take a screenshot of your configured VS Code
 and share it with #WorkshopReady
+
+
+[**➡️ Proceed to Chapter 03: Programming Basics**](./03-programming-basics.md)
