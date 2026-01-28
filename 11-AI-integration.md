@@ -831,6 +831,6 @@ It will anticipate needs, make decisions, and take action.
 
 ---
 
-➡️ [Continue to Chapter 12 · Career & Growth](../12-Career/README.md)
+➡️ [Continue to Chapter 12 · Code Quality](./12-code-quality.md)
 
 </div>
