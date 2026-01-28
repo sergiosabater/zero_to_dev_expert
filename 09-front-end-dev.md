@@ -59,3 +59,8 @@ Their work sits at the intersection of:
 * Clear and expressive syntax
 * Two-way data binding
 * Highly readable c
+
+---
+
+➡️ [Continue to Chapter 10 · Full Stack](./10-full-stack.md)
+
