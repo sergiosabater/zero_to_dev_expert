@@ -792,6 +792,6 @@ You now have the skills to build and deploy complete applications.
 
 ---
 
-➡️ [Continue to Chapter 11 · Advanced Topics](../11-Advanced/README.md)
+➡️ [Continue to Chapter 11 · AI Integration](./11-AI-integration.md)
 
 </div>
