@@ -93,6 +93,6 @@ We are keeping it light today. Your mission, should you choose to accept it:
 **You are ready.**
 Sleep well, drink water. Tomorrow, we get our hands dirty with the tools.
 
-[**➡️ Proceed to Chapter 02: Setting Up Your Environment**](../02-Environment/README.md)
+[**➡️ Proceed to Chapter 02: Setting Up Your Environment**](./02-environment-setup.md)
 
 </div>
