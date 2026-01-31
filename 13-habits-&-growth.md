@@ -4,7 +4,7 @@ Habits & Growth
 
 > *"We are what we repeatedly do. Excellence, then, is not an act, but a habit."* — Will Durant
 
-🔙 Back to Chapter 12 • Next Chapter 🔜
+[🔙 Back to Chapter 12](./12-code-quality.md) • [Next Chapter 🔜](./14-projects.md)
 
 ---
 
