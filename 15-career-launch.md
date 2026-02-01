@@ -4,7 +4,7 @@ Career Launch
 
 > *"Opportunities don't happen. You create them."* — Chris Grosser
 
-🔙 Back to Chapter 14 • Next Chapter 🔜
+[🔙 Back to Chapter 14](./14-projects.md) • [Main Page 🔜](./README.md)
 
 ---
 
