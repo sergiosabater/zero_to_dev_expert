@@ -4,7 +4,7 @@ Projects
 
 > *"Talk is cheap. Show me the code."* — Linus Torvalds
 
-🔙 Back to Chapter 13 • Next Chapter 🔜
+[🔙 Back to Chapter 13](./13-habits-&-growth.md) • [Main Page 🔜](./README.md)
 
 ---
 
