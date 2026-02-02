@@ -276,5 +276,3 @@ Your career has officially launched.
 ✨ **Remember**
 Skills open doors.
 People open opportunities.
-
-➡️ **Continue to Chapter 16 · Leadership & Influence**
