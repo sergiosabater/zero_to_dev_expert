@@ -237,4 +237,5 @@ You’re building a career that lasts.
 Consistency beats intensity.
 Rest fuels performance.
 
-➡️ **Continue to Chapter 14 · Communication & Influence**
+➡️ [Continue to Chapter 14 · Projects](./14-projects.md)
+
