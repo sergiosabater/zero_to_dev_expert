@@ -2,68 +2,133 @@
 
 # 🤖 Chapter 11 · AI Integration
 
-### LLMs · AI Agents · TensorFlow Basics
+![AI Integration](https://img.shields.io/badge/AI-Integration-blueviolet?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Intelligent-success?style=for-the-badge)
+![Level](https://img.shields.io/badge/Level-AI_Architect-orange?style=for-the-badge)
 
-![AI Integration](https://media.giphy.com/media/3o7btPCcdNniyf0ArS/giphy.gif)
+### *LLMs · AI Agents · TensorFlow Basics*
 
-> *"AI is not replacing developers. Developers using AI are replacing developers not using AI."*
-
-[🔙 Back to Chapter 10](./10-full-stack.md) • [Next Chapter 🔜](./12-code-quality.md)
+<img src="https://media.giphy.com/media/3o7btPCcdNniyf0ArS/giphy.gif" width="500">
 
 </div>
 
 ---
 
+> [!NOTE]
+> *"AI is not replacing developers. Developers using AI are replacing developers not using AI."*
+
+<div align="center">
+
+[![Back to Chapter 10](https://img.shields.io/badge/🔙-Chapter_10-blue?style=flat-square)](./10-full-stack.md)
+[![Next Chapter](https://img.shields.io/badge/Chapter_12-🔜-green?style=flat-square)](./12-code-quality.md)
+
+</div>
+
+<br>
+
 ## 🧠 The AI Revolution in Development
+
+<div align="center">
 
 We're living through the biggest shift in software development since the internet.
 
-**What changed:**
-- ❌ Writing every line of code manually
-- ❌ Spending hours debugging
-- ❌ Searching Stack Overflow endlessly
+</div>
 
-**What's possible now:**
-- ✅ AI writes boilerplate code
-- ✅ AI explains complex concepts
-- ✅ AI helps debug and optimize
-- ✅ AI powers intelligent features in your apps
+<br>
 
-> 💡 **Modern developers don't just write code. They orchestrate AI systems.**
+<table>
+<tr>
+<td width="50%" bgcolor="#ffebee" valign="top">
+
+### ❌ What Changed:
+
+- Writing every line of code manually
+- Spending hours debugging
+- Searching Stack Overflow endlessly
+
+</td>
+<td width="50%" bgcolor="#e8f5e9" valign="top">
+
+### ✅ What's Possible Now:
+
+- AI writes boilerplate code
+- AI explains complex concepts
+- AI helps debug and optimize
+- AI powers intelligent features in your apps
+
+</td>
+</tr>
+</table>
+
+<br>
+
+> [!IMPORTANT]
+> **Modern developers don't just write code. They orchestrate AI systems.**
 
 ---
+
+<br>
 
 ## 🎯 AI Integration Landscape
 
+<br>
+
+<div align="center">
+
 | Technology | What It Does | Use Cases |
-|------------|--------------|-----------|
-| **LLMs** | Generate and understand text | Chatbots, content generation, code assistance |
-| **AI Agents** | Autonomous task completion | Automated workflows, decision-making |
-| **TensorFlow/PyTorch** | Machine learning models | Image recognition, predictions, custom ML |
-| **Embeddings** | Semantic understanding | Search, recommendations, similarity |
-| **Computer Vision** | Image/video analysis | OCR, face detection, object recognition |
+|:---:|:---:|:---|
+| **🗣️ LLMs** | Generate and understand text | Chatbots, content generation, code assistance |
+| **🤖 AI Agents** | Autonomous task completion | Automated workflows, decision-making |
+| **🧮 TensorFlow/PyTorch** | Machine learning models | Image recognition, predictions, custom ML |
+| **🔍 Embeddings** | Semantic understanding | Search, recommendations, similarity |
+| **👁️ Computer Vision** | Image/video analysis | OCR, face detection, object recognition |
+
+</div>
 
 ---
 
+<br>
+
 ## 🗣️ Part 1 · Large Language Models (LLMs)
+
+<div align="center">
 
 ### *The Foundation of Modern AI*
 
 **LLMs** are neural networks trained on massive amounts of text to understand and generate human-like language.
 
+</div>
+
+<br>
+
 ### 🌟 Popular LLMs
 
-| Model | Company | Strengths | API Available |
-|-------|---------|-----------|---------------|
-| **GPT-4** | OpenAI | General purpose, coding | ✅ Yes |
-| **Claude** | Anthropic | Long context, analysis | ✅ Yes |
-| **Gemini** | Google | Multimodal, integration | ✅ Yes |
-| **Llama** | Meta | Open source, customizable | ✅ Yes |
-| **Mistral** | Mistral AI | Fast, efficient | ✅ Yes |
+<br>
+
+<div align="center">
+
+| Model | Company | Strengths | API |
+|:---:|:---:|:---|:---:|
+| **GPT-4** | OpenAI | General purpose, coding | ✅ |
+| **Claude** | Anthropic | Long context, analysis | ✅ |
+| **Gemini** | Google | Multimodal, integration | ✅ |
+| **Llama** | Meta | Open source, customizable | ✅ |
+| **Mistral** | Mistral AI | Fast, efficient | ✅ |
+
+</div>
+
+---
+
+<br>
 
 ### 🔧 Integrating OpenAI API
 
-#### Step 1: Installation
+<br>
+
+<details>
+<summary><b>📦 Step 1: Installation</b></summary>
+
+<br>
 
 ```bash
 npm install openai
@@ -71,7 +136,12 @@ npm install openai
 pip install openai
 ```
 
-#### Step 2: Basic Usage (Node.js)
+</details>
+
+<details>
+<summary><b>🟨 Step 2: Basic Usage (Node.js)</b></summary>
+
+<br>
 
 ```javascript
 import OpenAI from 'openai';
@@ -99,7 +169,12 @@ const response = await chat("Explain async/await in JavaScript");
 console.log(response);
 ```
 
-#### Step 3: Python Example
+</details>
+
+<details>
+<summary><b>🐍 Step 3: Python Example</b></summary>
+
+<br>
 
 ```python
 from openai import OpenAI
@@ -124,7 +199,20 @@ response = chat("Explain list comprehensions in Python")
 print(response)
 ```
 
+</details>
+
+---
+
+<br>
+
 ### 🎨 Building an AI Chatbot
+
+<br>
+
+<details>
+<summary><b>💬 Complete Chatbot Example</b></summary>
+
+<br>
 
 ```javascript
 import express from 'express';
@@ -173,38 +261,117 @@ app.post('/api/chat', async (req, res) => {
 app.listen(3000, () => console.log('Chatbot API running'));
 ```
 
+</details>
+
+---
+
+<br>
+
 ### 🎯 Key LLM Parameters
+
+<br>
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+#### 🎛️ Core Parameters:
 
 ```javascript
 {
-  model: "gpt-4",              // Which model to use
-  temperature: 0.7,            // Randomness (0-2, lower = more focused)
-  max_tokens: 1000,            // Maximum response length
-  top_p: 1,                    // Nucleus sampling (alternative to temperature)
-  frequency_penalty: 0,        // Penalize repetition (-2 to 2)
-  presence_penalty: 0,         // Encourage topic diversity (-2 to 2)
-  stop: ["\n\n"]              // Stop sequences
+  model: "gpt-4",
+  temperature: 0.7,
+  max_tokens: 1000,
+  top_p: 1
 }
 ```
 
-### 💡 Prompt Engineering Tips
+</td>
+<td width="50%" valign="top">
+
+#### 🔧 Fine-tuning Parameters:
 
 ```javascript
-// ❌ Vague prompt
+{
+  frequency_penalty: 0,
+  presence_penalty: 0,
+  stop: ["\n\n"]
+}
+```
+
+</td>
+</tr>
+</table>
+
+<br>
+
+<details>
+<summary><b>📚 Parameter Descriptions</b></summary>
+
+<br>
+
+| Parameter | Range | Description |
+|:---|:---:|:---|
+| **temperature** | 0-2 | Randomness (lower = more focused) |
+| **max_tokens** | 1-∞ | Maximum response length |
+| **top_p** | 0-1 | Nucleus sampling (alternative to temperature) |
+| **frequency_penalty** | -2 to 2 | Penalize repetition |
+| **presence_penalty** | -2 to 2 | Encourage topic diversity |
+| **stop** | Array | Stop sequences |
+
+</details>
+
+---
+
+<br>
+
+### 💡 Prompt Engineering Tips
+
+<br>
+
+<table>
+<tr>
+<td width="50%" bgcolor="#ffebee" valign="top">
+
+#### ❌ Vague Prompt:
+
+```
 "Write code"
+```
 
-// ✅ Specific prompt
-"Write a Python function that takes a list of numbers and returns 
-the median. Include error handling for empty lists."
+</td>
+<td width="50%" bgcolor="#e8f5e9" valign="top">
 
-// ✅ Use system messages for context
+#### ✅ Specific Prompt:
+
+```
+"Write a Python function that takes 
+a list of numbers and returns the median. 
+Include error handling for empty lists."
+```
+
+</td>
+</tr>
+</table>
+
+<br>
+
+<details>
+<summary><b>✅ Advanced Prompt Techniques</b></summary>
+
+<br>
+
+**Use system messages for context:**
+```javascript
 {
   role: "system",
   content: "You are an expert Python developer. Write clean, 
   well-documented code following PEP 8 style guidelines."
 }
+```
 
-// ✅ Few-shot learning (examples)
+**Few-shot learning (examples):**
+```javascript
 messages: [
   { role: "user", content: "Convert 32°F to Celsius" },
   { role: "assistant", content: "0°C" },
@@ -212,19 +379,62 @@ messages: [
 ]
 ```
 
+</details>
+
 ---
+
+<br>
 
 ## 🤖 Part 2 · AI Agents
 
+<div align="center">
+
 ### *Autonomous AI Systems*
 
-An **AI Agent** is an LLM that can:
-- 🎯 Make decisions
-- 🔧 Use tools (APIs, databases, code execution)
-- 🔄 Take action without constant human input
-- 🧠 Remember context across interactions
+</div>
+
+<br>
+
+> [!TIP]
+> An **AI Agent** is an LLM that can:
+> - 🎯 Make decisions
+> - 🔧 Use tools (APIs, databases, code execution)
+> - 🔄 Take action without constant human input
+> - 🧠 Remember context across interactions
+
+<br>
 
 ### 🏗️ Agent Architecture
+
+<br>
+
+<div align="center">
+
+```mermaid
+graph TD
+    A[👤 User Request] --> B[🧠 AI Agent LLM Brain]
+    B --> C[🔧 Tool Selection]
+    C --> D[Weather API]
+    C --> E[Email API]
+    C --> F[Database]
+    D --> G[⚡ Execute Actions]
+    E --> G
+    F --> G
+    G --> H[✅ Return Result]
+    
+    style A fill:#e3f2fd
+    style B fill:#f3e5f5
+    style C fill:#fff9c4
+    style D fill:#c8e6c9
+    style E fill:#c8e6c9
+    style F fill:#c8e6c9
+    style G fill:#ffccbc
+    style H fill:#b2dfdb
+```
+
+</div>
+
+<br>
 
 ```
 ┌─────────────────────────────────────┐
@@ -260,7 +470,18 @@ An **AI Agent** is an LLM that can:
 └─────────────────────────────────────┘
 ```
 
+---
+
+<br>
+
 ### 🔧 Building a Simple Agent
+
+<br>
+
+<details>
+<summary><b>🤖 Complete Agent Implementation</b></summary>
+
+<br>
 
 ```javascript
 import OpenAI from 'openai';
@@ -367,37 +588,129 @@ const result = await runAgent(
 console.log(result);
 ```
 
-### 🎯 Agent Use Cases
-
-- 📧 **Email Assistant**: Auto-categorize, draft responses
-- 📊 **Data Analyst**: Query databases, generate reports
-- 🛒 **Shopping Assistant**: Compare prices, place orders
-- 📅 **Calendar Manager**: Schedule meetings, resolve conflicts
-- 🔍 **Research Assistant**: Search, summarize, cite sources
+</details>
 
 ---
 
+<br>
+
+### 🎯 Agent Use Cases
+
+<br>
+
+<table>
+<tr>
+<td align="center" width="33%">
+
+📧  
+**Email Assistant**
+
+Auto-categorize  
+Draft responses
+
+</td>
+<td align="center" width="33%">
+
+📊  
+**Data Analyst**
+
+Query databases  
+Generate reports
+
+</td>
+<td align="center" width="33%">
+
+🛒  
+**Shopping Assistant**
+
+Compare prices  
+Place orders
+
+</td>
+</tr>
+<tr>
+<td align="center" width="33%">
+
+📅  
+**Calendar Manager**
+
+Schedule meetings  
+Resolve conflicts
+
+</td>
+<td align="center" width="33%">
+
+🔍  
+**Research Assistant**
+
+Search web  
+Summarize & cite
+
+</td>
+<td align="center" width="33%">
+
+🤖  
+**Code Assistant**
+
+Review PRs  
+Suggest fixes
+
+</td>
+</tr>
+</table>
+
+---
+
+<br>
+
 ## 🧮 Part 3 · TensorFlow Basics
+
+<div align="center">
 
 ### *Building Custom ML Models*
 
 **TensorFlow** is a framework for building and training machine learning models.
 
+</div>
+
+<br>
+
 ### 🎯 When to Use TensorFlow
 
-Use TensorFlow/ML when:
-- ✅ You need predictions based on patterns
-- ✅ You have labeled training data
-- ✅ LLMs are too expensive/slow
-- ✅ You need custom models
+<br>
 
-**Examples:**
+<table>
+<tr>
+<td width="50%" bgcolor="#e8f5e9" valign="top">
+
+### ✅ Use TensorFlow/ML when:
+
+- You need predictions based on patterns
+- You have labeled training data
+- LLMs are too expensive/slow
+- You need custom models
+
+</td>
+<td width="50%" bgcolor="#fff3e0" valign="top">
+
+### 📚 Examples:
+
 - Image classification
 - Spam detection
 - Price prediction
 - Recommendation systems
 
+</td>
+</tr>
+</table>
+
+---
+
+<br>
+
 ### 🔧 Installing TensorFlow
+
+<br>
 
 ```bash
 # Python
@@ -407,7 +720,18 @@ pip install tensorflow
 npm install @tensorflow/tfjs
 ```
 
+---
+
+<br>
+
 ### 🐍 TensorFlow Python Example
+
+<br>
+
+<details>
+<summary><b>📈 House Price Prediction Model</b></summary>
+
+<br>
 
 ```python
 import tensorflow as tf
@@ -443,7 +767,20 @@ predicted_price = model.predict(new_size)[0][0] * 100
 print(f"Predicted price for 1800 sq ft: ${predicted_price:.2f}k")
 ```
 
+</details>
+
+---
+
+<br>
+
 ### 🟨 TensorFlow.js Example
+
+<br>
+
+<details>
+<summary><b>📊 JavaScript ML Model</b></summary>
+
+<br>
 
 ```javascript
 import * as tf from '@tensorflow/tfjs';
@@ -473,7 +810,20 @@ const prediction = model.predict(tf.tensor2d([1.8], [1, 1]));
 prediction.print();
 ```
 
+</details>
+
+---
+
+<br>
+
 ### 🎨 Image Classification Example
+
+<br>
+
+<details>
+<summary><b>🖼️ Pre-trained Model for Image Recognition</b></summary>
+
+<br>
 
 ```python
 import tensorflow as tf
@@ -500,10 +850,20 @@ for i, (imagenet_id, label, score) in enumerate(decoded[0]):
     print(f"{i+1}. {label}: {score*100:.2f}%")
 ```
 
+</details>
+
+---
+
+<br>
+
 ### 🧠 Key ML Concepts
 
+<br>
+
+<div align="center">
+
 | Concept | Description |
-|---------|-------------|
+|:---|:---|
 | **Training** | Teaching model with examples |
 | **Epochs** | Number of times to go through data |
 | **Loss** | How wrong the model is |
@@ -511,13 +871,30 @@ for i, (imagenet_id, label, score) in enumerate(decoded[0]):
 | **Overfitting** | Model memorizes instead of learning |
 | **Validation** | Testing on unseen data |
 
+</div>
+
 ---
+
+<br>
 
 ## 🔗 Part 4 · Practical AI Integration
 
+<div align="center">
+
 ### 🎯 Building AI-Powered Features
 
-#### 1. Smart Search with Embeddings
+</div>
+
+<br>
+
+### 1. Smart Search with Embeddings
+
+<br>
+
+<details>
+<summary><b>🔍 Semantic Search Implementation</b></summary>
+
+<br>
 
 ```javascript
 import OpenAI from 'openai';
@@ -569,7 +946,20 @@ const results = await search("frontend deployment", docs);
 console.log(results);
 ```
 
-#### 2. AI Content Moderator
+</details>
+
+---
+
+<br>
+
+### 2. AI Content Moderator
+
+<br>
+
+<details>
+<summary><b>🛡️ Content Moderation System</b></summary>
+
+<br>
 
 ```javascript
 async function moderateContent(text) {
@@ -597,7 +987,20 @@ if (!result.allowed) {
 }
 ```
 
-#### 3. AI Code Reviewer
+</details>
+
+---
+
+<br>
+
+### 3. AI Code Reviewer
+
+<br>
+
+<details>
+<summary><b>👨‍💻 Automated Code Review</b></summary>
+
+<br>
 
 ```javascript
 async function reviewCode(code, language) {
@@ -635,23 +1038,45 @@ const review = await reviewCode(code, 'javascript');
 console.log(review);
 ```
 
+</details>
+
 ---
+
+<br>
 
 ## 💰 Part 5 · Cost Management
 
+<br>
+
 ### 📊 LLM Pricing (Approximate)
 
+<br>
+
+<div align="center">
+
 | Model | Input (per 1M tokens) | Output (per 1M tokens) |
-|-------|----------------------|------------------------|
-| GPT-4 | $10 | $30 |
-| GPT-3.5 Turbo | $0.50 | $1.50 |
-| Claude Sonnet | $3 | $15 |
-| Gemini Pro | $0.50 | $1.50 |
+|:---:|:---:|:---:|
+| **GPT-4** | $10 | $30 |
+| **GPT-3.5 Turbo** | $0.50 | $1.50 |
+| **Claude Sonnet** | $3 | $15 |
+| **Gemini Pro** | $0.50 | $1.50 |
+
+</div>
+
+---
+
+<br>
 
 ### 💡 Cost Optimization Tips
 
+<br>
+
+<details>
+<summary><b>1️⃣ Cache Responses</b></summary>
+
+<br>
+
 ```javascript
-// 1. Cache responses
 const cache = new Map();
 
 async function cachedCompletion(prompt) {
@@ -667,21 +1092,45 @@ async function cachedCompletion(prompt) {
   cache.set(prompt, response);
   return response;
 }
+```
 
-// 2. Use cheaper models when possible
+</details>
+
+<details>
+<summary><b>2️⃣ Use Cheaper Models When Possible</b></summary>
+
+<br>
+
+```javascript
 function selectModel(taskComplexity) {
   if (taskComplexity === 'simple') {
     return 'gpt-3.5-turbo';  // Cheaper
   }
   return 'gpt-4';  // More capable
 }
+```
 
-// 3. Limit token usage
+</details>
+
+<details>
+<summary><b>3️⃣ Limit Token Usage</b></summary>
+
+<br>
+
+```javascript
 {
   max_tokens: 500,  // Don't let it run wild
 }
+```
 
-// 4. Use streaming for better UX (same cost)
+</details>
+
+<details>
+<summary><b>4️⃣ Use Streaming for Better UX</b></summary>
+
+<br>
+
+```javascript
 const stream = await openai.chat.completions.create({
   model: "gpt-3.5-turbo",
   messages: [{ role: "user", content: prompt }],
@@ -693,17 +1142,36 @@ for await (const chunk of stream) {
 }
 ```
 
+</details>
+
 ---
+
+<br>
 
 ## 🛡️ Part 6 · Best Practices
 
+<br>
+
 ### 🔒 Security
 
-```javascript
-// ❌ Never expose API keys in frontend
-const apiKey = "sk-proj-...";  // NO!
+<br>
 
-// ✅ Use backend proxy
+<table>
+<tr>
+<td width="50%" bgcolor="#ffebee" valign="top">
+
+#### ❌ Never expose API keys in frontend
+
+```javascript
+const apiKey = "sk-proj-...";  // NO!
+```
+
+</td>
+<td width="50%" bgcolor="#e8f5e9" valign="top">
+
+#### ✅ Use backend proxy
+
+```javascript
 // Frontend
 fetch('/api/chat', {
   method: 'POST',
@@ -720,10 +1188,24 @@ app.post('/api/chat', async (req, res) => {
 });
 ```
 
+</td>
+</tr>
+</table>
+
+---
+
+<br>
+
 ### ⚡ Performance
 
+<br>
+
+<details>
+<summary><b>📡 Use Streaming for Better Perceived Performance</b></summary>
+
+<br>
+
 ```javascript
-// Use streaming for better perceived performance
 async function streamResponse(prompt) {
   const stream = await openai.chat.completions.create({
     model: "gpt-4",
@@ -738,10 +1220,23 @@ async function streamResponse(prompt) {
 }
 ```
 
+</details>
+
+---
+
+<br>
+
 ### 🎯 Prompt Safety
 
+<br>
+
+<details>
+<summary><b>🛡️ Prevent Prompt Injection</b></summary>
+
+<br>
+
 ```javascript
-// Prevent prompt injection
+// Sanitize input
 function sanitizeInput(userInput) {
   // Remove system prompt attempts
   const cleaned = userInput
@@ -754,52 +1249,104 @@ function sanitizeInput(userInput) {
 // Use separate user role
 messages: [
   { role: "system", content: "You are a helpful assistant." },
-  { role: "user", content: sanitizeInput(userInput) }  // User can't override system
+  { role: "user", content: sanitizeInput(userInput) }
 ]
 ```
 
+</details>
+
 ---
+
+<br>
 
 ## 🤖 AI Tip · Meta AI Usage
 
+<br>
+
 ### ✅ Use AI to Learn AI:
 
-- *"Explain how transformers work in LLMs"*
-- *"Generate example training data for image classification"*
-- *"Debug this TensorFlow model training code"*
-- *"Compare GPT-4 vs Claude for my use case"*
-- *"Optimize this prompt for better results"*
+<table>
+<tr>
+<td width="50%">
+
+```
+💡 "Explain how transformers work in LLMs"
+```
+```
+💡 "Generate example training data for image classification"
+```
+```
+💡 "Debug this TensorFlow model training code"
+```
+
+</td>
+<td width="50%">
+
+```
+💡 "Compare GPT-4 vs Claude for my use case"
+```
+```
+💡 "Optimize this prompt for better results"
+```
+```
+💡 "Explain RAG architecture with examples"
+```
+
+</td>
+</tr>
+</table>
 
 ---
+
+<br>
 
 ## 🎯 Mission · Day 11
 
-**Build AI-powered features** 🤖
+<div align="center">
 
-- [ ] 🗣️ Create a simple chatbot using OpenAI or Anthropic API
-- [ ] 🔧 Build an agent that uses at least 2 tools/functions
-- [ ] 📊 Train a basic TensorFlow model (regression or classification)
-- [ ] 🔍 Implement semantic search with embeddings
-- [ ] 💬 Add streaming responses for better UX
-- [ ] 🔒 Implement proper API key security
+### 🤖 Build AI-powered features
 
-### Bonus Challenge ⭐
+</div>
 
-- [ ] Build a code review bot that analyzes pull requests
-- [ ] Create an AI-powered customer support system
-- [ ] Implement RAG (Retrieval Augmented Generation)
-- [ ] Fine-tune a model on custom data
-- [ ] Build a multi-agent system with specialized agents
-- [ ] Create an AI content moderation pipeline
-- [ ] Deploy an ML model to production
+<br>
+
+### Core Tasks:
+
+- [ ] 🗣️ **Create a simple chatbot** — Using OpenAI or Anthropic API
+- [ ] 🔧 **Build an agent** — With at least 2 tools/functions
+- [ ] 📊 **Train a TensorFlow model** — Regression or classification
+- [ ] 🔍 **Implement semantic search** — Using embeddings
+- [ ] 💬 **Add streaming responses** — For better UX
+- [ ] 🔒 **Implement API key security** — Backend proxy
+
+<br>
+
+<details>
+<summary><b>⭐ Bonus Challenges</b></summary>
+
+<br>
+
+- [ ] 👨‍💻 Build a code review bot that analyzes pull requests
+- [ ] 💬 Create an AI-powered customer support system
+- [ ] 📚 Implement RAG (Retrieval Augmented Generation)
+- [ ] 🎯 Fine-tune a model on custom data
+- [ ] 🤖 Build a multi-agent system with specialized agents
+- [ ] 🛡️ Create an AI content moderation pipeline
+- [ ] 🚀 Deploy an ML model to production
+
+</details>
 
 ---
+
+<br>
 
 <div align="center">
 
 ## 🏆 Achievement Unlocked
 
-### *"The AI Architect"*
+### **The AI Architect**
+
+<br>
 
 **You now understand:**
 - LLM integration (GPT, Claude)
@@ -809,10 +1356,22 @@ messages: [
 - Cost optimization
 - Security best practices
 
-You're no longer just a developer.  
+<br>
+
+*You're no longer just a developer.*  
 **You're building intelligent systems.**
 
+<br>
+
+![Achievement](https://img.shields.io/badge/🏆-Achievement_Unlocked-gold?style=for-the-badge)
+
+</div>
+
 ---
+
+<br>
+
+<div align="center">
 
 ### 🎓 Pro Tip
 
@@ -820,7 +1379,13 @@ You're no longer just a developer.
 > The best developers know when to use AI  
 > and when to rely on traditional code."
 
+</div>
+
 ---
+
+<br>
+
+<div align="center">
 
 ### 🌟 The Future is Agentic
 
@@ -829,8 +1394,10 @@ It will anticipate needs, make decisions, and take action.
 
 **You're ready to build it.**
 
----
+<br>
 
-➡️ [Continue to Chapter 12 · Code Quality](./12-code-quality.md)
+[![Continue](https://img.shields.io/badge/➡️_Continue_to_Chapter_12-Code_Quality-success?style=for-the-badge)](./12-code-quality.md)
 
 </div>
+
+<br>
