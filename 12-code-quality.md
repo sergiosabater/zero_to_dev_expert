@@ -2,41 +2,131 @@
 
 # ✨ Chapter 12 · Code Quality
 
-### Clean Code · Testing · Refactoring
+![Code Quality](https://img.shields.io/badge/Code-Quality-blueviolet?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Clean-success?style=for-the-badge)
+![Level](https://img.shields.io/badge/Level-Craftsperson-orange?style=for-the-badge)
 
-![Code Quality](https://media.giphy.com/media/ZVik7pBtu9dNS/giphy.gif)
+### *Clean Code · Testing · Refactoring*
 
-> *"Any fool can write code that a computer can understand. Good programmers write code that humans can understand."* — Martin Fowler
-
-[🔙 Back to Chapter 11](./11-AI-integration.md) • [Next Chapter 🔜](./13-habits-&-growth.md)
+<img src="https://media.giphy.com/media/ZVik7pBtu9dNS/giphy.gif" width="500">
 
 </div>
 
 ---
 
+> [!NOTE]
+> *"Any fool can write code that a computer can understand. Good programmers write code that humans can understand."* — **Martin Fowler**
+
+<div align="center">
+
+[![Back to Chapter 11](https://img.shields.io/badge/🔙-Chapter_11-blue?style=flat-square)](./11-AI-integration.md)
+[![Next Chapter](https://img.shields.io/badge/Chapter_13-🔜-green?style=flat-square)](./13-habits-&-growth.md)
+
+</div>
+
+<br>
+
 ## 🎯 Why Code Quality Matters
+
+<div align="center">
 
 **Bad code works... until it doesn't.**
 
-The difference between junior and senior developers:
-- ❌ Junior: "It works, ship it!"
-- ✅ Senior: "It works, but can others understand it? Can I maintain it?"
+</div>
+
+<br>
+
+<table>
+<tr>
+<td width="50%" bgcolor="#ffebee" valign="top">
+
+### ❌ Junior Developer:
+
+*"It works, ship it!"*
+
+</td>
+<td width="50%" bgcolor="#e8f5e9" valign="top">
+
+### ✅ Senior Developer:
+
+*"It works, but can others understand it? Can I maintain it?"*
+
+</td>
+</tr>
+</table>
+
+<br>
 
 ### 💰 The Cost of Bad Code
 
-- 🐛 More bugs in production
-- ⏱️ Slower development over time
-- 😤 Team frustration
-- 💸 Higher maintenance costs
-- 🔥 Technical debt compounds
+<table>
+<tr>
+<td align="center" width="20%">
 
-> 💡 **Writing clean code takes the same time as writing messy code. But reading clean code saves hours.**
+🐛  
+**More bugs**
+
+Production issues
+
+</td>
+<td align="center" width="20%">
+
+⏱️  
+**Slower dev**
+
+Time compounds
+
+</td>
+<td align="center" width="20%">
+
+😤  
+**Frustration**
+
+Team morale drops
+
+</td>
+<td align="center" width="20%">
+
+💸  
+**Higher costs**
+
+Maintenance nightmare
+
+</td>
+<td align="center" width="20%">
+
+🔥  
+**Tech debt**
+
+Interest compounds
+
+</td>
+</tr>
+</table>
+
+<br>
+
+> [!IMPORTANT]
+> **Writing clean code takes the same time as writing messy code. But reading clean code saves hours.**
 
 ---
 
+<br>
+
 ## 📖 Part 1 · Clean Code Principles
 
+<div align="center">
+
 ### *Code That Speaks for Itself*
+
+</div>
+
+<br>
+
+<details>
+<summary><b>✅ What is Clean Code?</b></summary>
+
+<br>
 
 Clean code is code that:
 - ✅ Is easy to read
@@ -44,17 +134,32 @@ Clean code is code that:
 - ✅ Is easy to modify
 - ✅ Does one thing well
 
+</details>
+
+<br>
+
 ### 🏷️ Meaningful Names
 
+<table>
+<tr>
+<td width="50%" valign="top">
+
+#### ❌ Bad: Cryptic names
+
 ```javascript
-// ❌ Bad: Cryptic names
 function calc(a, b) {
   const x = a * b;
   const y = x * 0.2;
   return x - y;
 }
+```
 
-// ✅ Good: Self-documenting
+</td>
+<td width="50%" valign="top">
+
+#### ✅ Good: Self-documenting
+
+```javascript
 function calculateTotalWithDiscount(price, quantity) {
   const subtotal = price * quantity;
   const discount = subtotal * 0.2;
@@ -62,32 +167,74 @@ function calculateTotalWithDiscount(price, quantity) {
 }
 ```
 
+</td>
+</tr>
+</table>
+
+<br>
+
+<details>
+<summary><b>🐍 Python Example</b></summary>
+
+<br>
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+#### ❌ Bad: Ambiguous names
+
 ```python
-# ❌ Bad: Ambiguous names
 def process(d):
     result = []
     for i in d:
         if i[0] > 18:
             result.append(i)
     return result
+```
 
-# ✅ Good: Clear and descriptive
+</td>
+<td width="50%" valign="top">
+
+#### ✅ Good: Clear and descriptive
+
+```python
 def get_adult_users(users):
     adult_users = []
     for user in users:
         if user['age'] > 18:
             adult_users.append(user)
     return adult_users
-
-# ✅ Even better: Pythonic
-def get_adult_users(users):
-    return [user for user in users if user['age'] > 18]
 ```
+
+#### ✅ Even better: Pythonic
+
+```python
+def get_adult_users(users):
+    return [user for user in users 
+            if user['age'] > 18]
+```
+
+</td>
+</tr>
+</table>
+
+</details>
+
+---
+
+<br>
 
 ### 📏 Functions Should Do One Thing
 
+<br>
+
+<details>
+<summary><b>❌ Bad Example: Function does too much</b></summary>
+
+<br>
+
 ```javascript
-// ❌ Bad: Function does too much
 function processUserAndSendEmail(userData) {
   // Validate data
   if (!userData.email || !userData.name) {
@@ -109,8 +256,22 @@ function processUserAndSendEmail(userData) {
   
   return user;
 }
+```
 
-// ✅ Good: Separate concerns
+> ⚠️ **Problems:**
+> - Violates Single Responsibility Principle
+> - Hard to test
+> - Hard to reuse
+> - Difficult to modify
+
+</details>
+
+<details>
+<summary><b>✅ Good Example: Separate concerns</b></summary>
+
+<br>
+
+```javascript
 function validateUserData(userData) {
   if (!userData.email || !userData.name) {
     throw new Error('Invalid data');
@@ -143,10 +304,29 @@ function registerUser(userData) {
 }
 ```
 
+> ✅ **Benefits:**
+> - Each function has one job
+> - Easy to test individually
+> - Reusable components
+> - Clear responsibilities
+
+</details>
+
+---
+
+<br>
+
 ### 💬 Comments vs Self-Documenting Code
 
+<br>
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+#### ❌ Bad: Comments explain WHAT
+
 ```javascript
-// ❌ Bad: Comments explain what code does
 // Loop through users array
 for (let i = 0; i < users.length; i++) {
   // Check if user age is greater than 18
@@ -155,28 +335,66 @@ for (let i = 0; i < users.length; i++) {
     adults.push(users[i]);
   }
 }
+```
 
-// ✅ Good: Code explains itself
-const adults = users.filter(user => user.age > 18);
+</td>
+<td width="50%" valign="top">
 
-// ✅ Good: Comments explain WHY, not WHAT
-// We filter at 18 because that's the legal age in most jurisdictions
+#### ✅ Good: Code explains itself
+
+```javascript
+const adults = users.filter(
+  user => user.age > 18
+);
+```
+
+#### ✅ Good: Comments explain WHY
+
+```javascript
+// We filter at 18 because that's 
+// the legal age in most jurisdictions
 // TODO: Make this configurable per region
 const LEGAL_AGE = 18;
-const adults = users.filter(user => user.age >= LEGAL_AGE);
+const adults = users.filter(
+  user => user.age >= LEGAL_AGE
+);
 ```
+
+</td>
+</tr>
+</table>
+
+---
+
+<br>
 
 ### 🔢 Magic Numbers
 
+<br>
+
+<details>
+<summary><b>❌ Bad Example: Magic numbers everywhere</b></summary>
+
+<br>
+
 ```javascript
-// ❌ Bad: Magic numbers
 if (user.role === 3) {
   grantAccess();
 }
 
 setTimeout(() => checkStatus(), 5000);
+```
 
-// ✅ Good: Named constants
+> ⚠️ What does 3 mean? What's 5000?
+
+</details>
+
+<details>
+<summary><b>✅ Good Example: Named constants</b></summary>
+
+<br>
+
+```javascript
 const ROLE_ADMIN = 3;
 const STATUS_CHECK_INTERVAL_MS = 5000;
 
@@ -185,8 +403,16 @@ if (user.role === ROLE_ADMIN) {
 }
 
 setTimeout(() => checkStatus(), STATUS_CHECK_INTERVAL_MS);
+```
 
-// ✅ Even better: Enums
+</details>
+
+<details>
+<summary><b>✅ Even Better: Enums</b></summary>
+
+<br>
+
+```javascript
 const UserRole = {
   GUEST: 1,
   USER: 2,
@@ -199,28 +425,34 @@ if (user.role === UserRole.ADMIN) {
 }
 ```
 
+</details>
+
+---
+
+<br>
+
 ### 📦 Keep It Simple (KISS)
 
-```javascript
-// ❌ Bad: Overly complex
-function isDivisibleByThreeAndFive(number) {
-  return (
-    (number % 3 === 0 && number % 5 === 0) ||
-    (number % 3 === 0 && number % 5 !== 0 && number % 5 === 0) ||
-    (number % 3 !== 0 && number % 3 === 0 && number % 5 === 0)
-  ) ? true : false;
-}
+<br>
 
-// ✅ Good: Simple and clear
-function isDivisibleByThreeAndFive(number) {
-  return number % 3 === 0 && number % 5 === 0;
-}
-```
+| ❌ Bad: Overly complex | ✅ Good: Simple and clear |
+|:---|:---|
+| `function isDivisibleByThreeAndFive(number) {`<br>`  return (`<br>`    (number % 3 === 0 && number % 5 === 0) \|\|`<br>`    (number % 3 === 0 && number % 5 !== 0 && number % 5 === 0) \|\|`<br>`    (number % 3 !== 0 && number % 3 === 0 && number % 5 === 0)`<br>`  ) ? true : false;`<br>`}` | `function isDivisibleByThreeAndFive(number) {`<br>`  return number % 3 === 0 && number % 5 === 0;`<br>`}` |
+
+---
+
+<br>
 
 ### 🔁 DRY (Don't Repeat Yourself)
 
+<br>
+
+<details>
+<summary><b>❌ Bad Example: Repetition</b></summary>
+
+<br>
+
 ```javascript
-// ❌ Bad: Repetition
 function getUserEmail(userId) {
   const response = await fetch(`/api/users/${userId}`);
   const user = await response.json();
@@ -238,8 +470,16 @@ function getUserAge(userId) {
   const user = await response.json();
   return user.age;
 }
+```
 
-// ✅ Good: Reusable function
+</details>
+
+<details>
+<summary><b>✅ Good Example: Reusable function</b></summary>
+
+<br>
+
+```javascript
 async function getUser(userId) {
   const response = await fetch(`/api/users/${userId}`);
   return await response.json();
@@ -250,31 +490,82 @@ async function getUserEmail(userId) {
   return user.email;
 }
 
-// ✅ Even better: Direct access
-async function getUser(userId) {
-  const response = await fetch(`/api/users/${userId}`);
-  return await response.json();
-}
-
-// Just use: const user = await getUser(userId); user.email
+// Even better: Just use directly
+const user = await getUser(userId);
+console.log(user.email);
 ```
+
+</details>
 
 ---
 
+<br>
+
 ## 🧪 Part 2 · Testing
+
+<div align="center">
 
 ### *Confidence in Your Code*
 
 **Tests are not optional. They are insurance.**
 
-| Without Tests | With Tests |
-|---------------|------------|
-| ❌ Fear of changing code | ✅ Refactor with confidence |
-| ❌ Manual testing after every change | ✅ Automated verification |
-| ❌ Bugs in production | ✅ Catch bugs before deployment |
-| ❌ "It works on my machine" | ✅ Consistent behavior |
+</div>
+
+<br>
+
+<table>
+<tr>
+<td width="50%" bgcolor="#ffebee" valign="top">
+
+### ❌ Without Tests
+
+- Fear of changing code
+- Manual testing after every change
+- Bugs in production
+- "It works on my machine"
+
+</td>
+<td width="50%" bgcolor="#e8f5e9" valign="top">
+
+### ✅ With Tests
+
+- Refactor with confidence
+- Automated verification
+- Catch bugs before deployment
+- Consistent behavior
+
+</td>
+</tr>
+</table>
+
+---
+
+<br>
 
 ### 🎯 Types of Tests
+
+<br>
+
+<div align="center">
+
+```mermaid
+graph TB
+    A[Test Pyramid] --> B[E2E Tests<br/>Slow, Expensive<br/>10%]
+    A --> C[Integration Tests<br/>Medium Speed<br/>20%]
+    A --> D[Unit Tests<br/>Fast, Cheap<br/>70%]
+    
+    B --> B1[Cypress, Playwright]
+    C --> C1[API Tests]
+    D --> D1[Jest, Mocha, pytest]
+    
+    style B fill:#ffcdd2
+    style C fill:#fff9c4
+    style D fill:#c8e6c9
+```
+
+</div>
+
+<br>
 
 ```
 ┌─────────────────────────────────────┐
@@ -294,7 +585,18 @@ async function getUser(userId) {
 Test Pyramid: 70% Unit, 20% Integration, 10% E2E
 ```
 
+---
+
+<br>
+
 ### 🧪 Unit Testing with Jest
+
+<br>
+
+<details>
+<summary><b>📝 Code to Test</b></summary>
+
+<br>
 
 ```javascript
 // math.js
@@ -313,6 +615,13 @@ export function divide(a, b) {
   return a / b;
 }
 ```
+
+</details>
+
+<details>
+<summary><b>✅ Test Suite</b></summary>
+
+<br>
 
 ```javascript
 // math.test.js
@@ -357,7 +666,20 @@ describe('Math functions', () => {
 });
 ```
 
+</details>
+
+---
+
+<br>
+
 ### 🐍 Unit Testing with pytest
+
+<br>
+
+<details>
+<summary><b>📝 Code to Test</b></summary>
+
+<br>
 
 ```python
 # calculator.py
@@ -372,6 +694,13 @@ def divide(a, b):
         raise ValueError("Cannot divide by zero")
     return a / b
 ```
+
+</details>
+
+<details>
+<summary><b>✅ Test Suite</b></summary>
+
+<br>
 
 ```python
 # test_calculator.py
@@ -397,10 +726,23 @@ class TestCalculator:
             divide(10, 0)
 ```
 
+</details>
+
+---
+
+<br>
+
 ### 🎯 Testing Best Practices
 
+<br>
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+#### ✅ Good: Test behavior
+
 ```javascript
-// ✅ Good: Test behavior, not implementation
 test('should filter adult users', () => {
   const users = [
     { name: 'Alice', age: 25 },
@@ -412,13 +754,32 @@ test('should filter adult users', () => {
   expect(adults).toHaveLength(1);
   expect(adults[0].name).toBe('Alice');
 });
+```
 
-// ❌ Bad: Testing implementation details
+</td>
+<td width="50%" valign="top">
+
+#### ❌ Bad: Test implementation
+
+```javascript
 test('should loop through users array', () => {
-  // Don't test HOW it works, test WHAT it does
+  // Don't test HOW it works,
+  // test WHAT it does
 });
+```
 
-// ✅ Good: Test edge cases
+</td>
+</tr>
+</table>
+
+<br>
+
+<details>
+<summary><b>✅ Test Edge Cases Example</b></summary>
+
+<br>
+
+```javascript
 describe('getUserById', () => {
   test('should return user when found', () => {
     const user = getUserById(1);
@@ -436,29 +797,54 @@ describe('getUserById', () => {
 });
 ```
 
+</details>
+
+---
+
+<br>
+
 ### 🔄 Test-Driven Development (TDD)
 
-```
-1. ❌ Write a failing test
-2. ✅ Write minimal code to pass
-3. 🔄 Refactor
-4. Repeat
+<br>
+
+<div align="center">
+
+```mermaid
+graph LR
+    A[❌ Write failing test] --> B[✅ Write minimal code]
+    B --> C[🔄 Refactor]
+    C --> A
+    
+    style A fill:#ffcdd2
+    style B fill:#c8e6c9
+    style C fill:#bbdefb
 ```
 
-**Example:**
+</div>
 
+<br>
+
+<details>
+<summary><b>📚 TDD Example</b></summary>
+
+<br>
+
+**Step 1: Write test first (it will fail)**
 ```javascript
-// 1. Write test first (it will fail)
 test('should calculate discount price', () => {
   expect(calculateDiscount(100, 0.2)).toBe(80);
 });
+```
 
-// 2. Write minimal code to pass
+**Step 2: Write minimal code to pass**
+```javascript
 function calculateDiscount(price, discountRate) {
   return price - (price * discountRate);
 }
+```
 
-// 3. Refactor if needed
+**Step 3: Refactor if needed**
+```javascript
 function calculateDiscount(price, discountRate) {
   if (price < 0 || discountRate < 0 || discountRate > 1) {
     throw new Error('Invalid input');
@@ -467,7 +853,20 @@ function calculateDiscount(price, discountRate) {
 }
 ```
 
+</details>
+
+---
+
+<br>
+
 ### 🎭 Mocking & Stubbing
+
+<br>
+
+<details>
+<summary><b>🔧 Service Code</b></summary>
+
+<br>
 
 ```javascript
 // user.service.js
@@ -475,7 +874,16 @@ export async function getUserData(userId) {
   const response = await fetch(`/api/users/${userId}`);
   return await response.json();
 }
+```
 
+</details>
+
+<details>
+<summary><b>✅ Test with Mocks</b></summary>
+
+<br>
+
+```javascript
 // user.service.test.js
 import { getUserData } from './user.service';
 
@@ -510,27 +918,95 @@ describe('getUserData', () => {
 });
 ```
 
+</details>
+
 ---
 
+<br>
+
 ## 🔧 Part 3 · Refactoring
+
+<div align="center">
 
 ### *Improving Code Without Changing Behavior*
 
 **Refactoring** = Restructuring code to make it better without changing what it does.
 
+</div>
+
+<br>
+
 ### 🎯 When to Refactor
 
-- 🔴 Code is hard to understand
-- 🔴 Functions are too long (>20 lines)
-- 🔴 Duplicated code
-- 🔴 Too many parameters (>3)
-- 🔴 Deep nesting (>3 levels)
-- 🔴 Before adding new features
+<table>
+<tr>
+<td align="center" width="33%">
+
+🔴  
+**Hard to understand**
+
+Code is cryptic
+
+</td>
+<td align="center" width="33%">
+
+🔴  
+**Too long**
+
+Functions >20 lines
+
+</td>
+<td align="center" width="33%">
+
+🔴  
+**Duplicated**
+
+Copy-paste code
+
+</td>
+</tr>
+<tr>
+<td align="center" width="33%">
+
+🔴  
+**Many parameters**
+
+More than 3
+
+</td>
+<td align="center" width="33%">
+
+🔴  
+**Deep nesting**
+
+More than 3 levels
+
+</td>
+<td align="center" width="33%">
+
+🔴  
+**Before features**
+
+Clean before adding
+
+</td>
+</tr>
+</table>
+
+---
+
+<br>
 
 ### 🏗️ Extract Function
 
+<br>
+
+<details>
+<summary><b>❌ Before: Long function</b></summary>
+
+<br>
+
 ```javascript
-// ❌ Before: Long function
 function generateReport(users) {
   let report = '';
   
@@ -555,8 +1031,16 @@ function generateReport(users) {
   
   return report;
 }
+```
 
-// ✅ After: Extracted functions
+</details>
+
+<details>
+<summary><b>✅ After: Extracted functions</b></summary>
+
+<br>
+
+```javascript
 function calculateAverageAge(users) {
   const totalAge = users.reduce((sum, user) => sum + user.age, 0);
   return totalAge / users.length;
@@ -580,28 +1064,65 @@ ${formatUserList(users)}
 }
 ```
 
+</details>
+
+---
+
+<br>
+
 ### 📦 Extract Variable
 
+<br>
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+#### ❌ Before: Complex expression
+
 ```javascript
-// ❌ Before: Complex expression
-if (order.total > 100 && order.items.length > 5 && order.user.isPremium) {
-  applyDiscount();
-}
-
-// ✅ After: Meaningful variables
-const isLargeOrder = order.total > 100;
-const hasMultipleItems = order.items.length > 5;
-const isPremiumCustomer = order.user.isPremium;
-
-if (isLargeOrder && hasMultipleItems && isPremiumCustomer) {
+if (order.total > 100 && 
+    order.items.length > 5 && 
+    order.user.isPremium) {
   applyDiscount();
 }
 ```
 
-### 🎨 Replace Conditional with Polymorphism
+</td>
+<td width="50%" valign="top">
+
+#### ✅ After: Meaningful variables
 
 ```javascript
-// ❌ Before: Switch statement
+const isLargeOrder = order.total > 100;
+const hasMultipleItems = order.items.length > 5;
+const isPremiumCustomer = order.user.isPremium;
+
+if (isLargeOrder && 
+    hasMultipleItems && 
+    isPremiumCustomer) {
+  applyDiscount();
+}
+```
+
+</td>
+</tr>
+</table>
+
+---
+
+<br>
+
+### 🎨 Replace Conditional with Polymorphism
+
+<br>
+
+<details>
+<summary><b>❌ Before: Switch statement</b></summary>
+
+<br>
+
+```javascript
 function getSpeed(vehicle) {
   switch(vehicle.type) {
     case 'car':
@@ -614,8 +1135,16 @@ function getSpeed(vehicle) {
       return 0;
   }
 }
+```
 
-// ✅ After: Polymorphism
+</details>
+
+<details>
+<summary><b>✅ After: Polymorphism</b></summary>
+
+<br>
+
+```javascript
 class Vehicle {
   getSpeed() {
     return this.speed;
@@ -641,23 +1170,43 @@ class Plane extends Vehicle {
 }
 ```
 
+</details>
+
+---
+
+<br>
+
 ### 🔄 Replace Loop with Pipeline
 
+<br>
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+#### ❌ Before: Imperative loop
+
 ```javascript
-// ❌ Before: Imperative loop
 function getActiveAdultUsernames(users) {
   const result = [];
   
   for (let i = 0; i < users.length; i++) {
-    if (users[i].age >= 18 && users[i].active) {
+    if (users[i].age >= 18 && 
+        users[i].active) {
       result.push(users[i].username);
     }
   }
   
   return result;
 }
+```
 
-// ✅ After: Functional pipeline
+</td>
+<td width="50%" valign="top">
+
+#### ✅ After: Functional pipeline
+
+```javascript
 function getActiveAdultUsernames(users) {
   return users
     .filter(user => user.age >= 18)
@@ -666,10 +1215,25 @@ function getActiveAdultUsernames(users) {
 }
 ```
 
+</td>
+</tr>
+</table>
+
+---
+
+<br>
+
 ### 🧹 Remove Dead Code
 
+<br>
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+#### ❌ Before: Commented code
+
 ```javascript
-// ❌ Before: Commented code and unused functions
 function processOrder(order) {
   // const oldMethod = calculateOldPrice(order);
   // console.log('Debug:', oldMethod);
@@ -681,8 +1245,14 @@ function calculateOldPrice(order) {
   // This is no longer used
   return order.total * 0.9;
 }
+```
 
-// ✅ After: Clean and minimal
+</td>
+<td width="50%" valign="top">
+
+#### ✅ After: Clean and minimal
+
+```javascript
 function processOrder(order) {
   return calculateNewPrice(order);
 }
@@ -690,55 +1260,116 @@ function processOrder(order) {
 // If you need old code, Git has it!
 ```
 
+</td>
+</tr>
+</table>
+
 ---
+
+<br>
 
 ## 🎯 Part 4 · Code Review Best Practices
 
+<br>
+
 ### 👥 For Reviewers
 
-**✅ Do:**
-- Focus on logic and maintainability
-- Ask questions, don't demand
-- Praise good code
-- Suggest alternatives
-- Check for tests
+<br>
 
-**❌ Don't:**
-- Nitpick style (use linters instead)
-- Be condescending
-- Review 1000+ lines at once
-- Block on personal preferences
+<table>
+<tr>
+<td width="50%" bgcolor="#e8f5e9" valign="top">
 
-### 📝 Good Code Review Comments
+### ✅ Do:
 
-```javascript
-// ✅ Good: Constructive
-"This works, but could be more efficient. Have you considered 
-using a Map here instead of an array? It would give us O(1) 
-lookup instead of O(n)."
+- 🎯 Focus on logic and maintainability
+- ❓ Ask questions, don't demand
+- 👏 Praise good code
+- 💡 Suggest alternatives
+- ✅ Check for tests
 
-// ✅ Good: Question-based
-"What happens if userId is undefined here? Should we add 
-validation?"
+</td>
+<td width="50%" bgcolor="#ffebee" valign="top">
 
-// ✅ Good: Specific
-"Line 42: This could throw an error if the array is empty. 
-Consider adding a length check."
+### ❌ Don't:
 
-// ❌ Bad: Vague
-"This is wrong."
+- 🎨 Nitpick style (use linters instead)
+- 😤 Be condescending
+- 📚 Review 1000+ lines at once
+- 🚫 Block on personal preferences
 
-// ❌ Bad: Condescending
-"Obviously you should use a Map here. Everyone knows that."
-```
+</td>
+</tr>
+</table>
 
 ---
 
+<br>
+
+### 📝 Good Code Review Comments
+
+<br>
+
+<details>
+<summary><b>✅ Good Examples</b></summary>
+
+<br>
+
+**Constructive:**
+```
+"This works, but could be more efficient. Have you considered 
+using a Map here instead of an array? It would give us O(1) 
+lookup instead of O(n)."
+```
+
+**Question-based:**
+```
+"What happens if userId is undefined here? Should we add 
+validation?"
+```
+
+**Specific:**
+```
+"Line 42: This could throw an error if the array is empty. 
+Consider adding a length check."
+```
+
+</details>
+
+<details>
+<summary><b>❌ Bad Examples</b></summary>
+
+<br>
+
+**Vague:**
+```
+"This is wrong."
+```
+
+**Condescending:**
+```
+"Obviously you should use a Map here. Everyone knows that."
+```
+
+</details>
+
+---
+
+<br>
+
 ## 🛠️ Part 5 · Tools for Code Quality
+
+<br>
 
 ### 📏 Linters
 
-**ESLint (JavaScript):**
+<br>
+
+<details>
+<summary><b>ESLint (JavaScript)</b></summary>
+
+<br>
+
 ```json
 // .eslintrc.json
 {
@@ -752,7 +1383,13 @@ Consider adding a length check."
 }
 ```
 
-**Pylint (Python):**
+</details>
+
+<details>
+<summary><b>Pylint (Python)</b></summary>
+
+<br>
+
 ```bash
 # Install
 pip install pylint
@@ -761,9 +1398,21 @@ pip install pylint
 pylint myfile.py
 ```
 
+</details>
+
+---
+
+<br>
+
 ### 🎨 Formatters
 
-**Prettier (JavaScript):**
+<br>
+
+<details>
+<summary><b>Prettier (JavaScript)</b></summary>
+
+<br>
+
 ```json
 // .prettierrc
 {
@@ -774,7 +1423,13 @@ pylint myfile.py
 }
 ```
 
-**Black (Python):**
+</details>
+
+<details>
+<summary><b>Black (Python)</b></summary>
+
+<br>
+
 ```bash
 # Install
 pip install black
@@ -783,85 +1438,164 @@ pip install black
 black myfile.py
 ```
 
+</details>
+
+---
+
+<br>
+
 ### 🔍 Static Analysis
 
-**TypeScript:**
+<br>
+
+<details>
+<summary><b>TypeScript Example</b></summary>
+
+<br>
+
 ```typescript
 // Catch errors before runtime
 function greet(name: string): string {
   return `Hello, ${name}`;
 }
 
-greet(42); // ❌ Error: Argument of type 'number' is not assignable
+greet(42); // ❌ Error: Argument of type 'number' 
+           //    is not assignable
 ```
 
+</details>
+
 ---
+
+<br>
 
 ## 🤖 AI Tip · Code Quality
 
+<br>
+
 ### ✅ Smart Prompts:
 
-- *"Review this code and suggest improvements"*
-- *"Refactor this function to be more readable"*
-- *"Write unit tests for this function"*
-- *"Explain why this code violates SOLID principles"*
-- *"Convert this imperative code to functional style"*
+<table>
+<tr>
+<td width="50%">
+
+```
+💡 "Review this code and suggest improvements"
+```
+```
+💡 "Refactor this function to be more readable"
+```
+```
+💡 "Write unit tests for this function"
+```
+
+</td>
+<td width="50%">
+
+```
+💡 "Explain why this code violates SOLID principles"
+```
+```
+💡 "Convert this imperative code to functional style"
+```
+```
+💡 "Find edge cases I might have missed"
+```
+
+</td>
+</tr>
+</table>
+
+<br>
 
 ### 🎯 AI Can Help With:
 
-- Generating test cases
-- Suggesting refactoring patterns
-- Explaining code smells
-- Creating documentation
-- Finding edge cases
+| Area | Application |
+|:---|:---|
+| ✅ Generating test cases | Comprehensive coverage |
+| ✅ Suggesting refactoring patterns | Design improvements |
+| ✅ Explaining code smells | Learning opportunities |
+| ✅ Creating documentation | Clear explanations |
+| ✅ Finding edge cases | Better testing |
 
 ---
+
+<br>
 
 ## 🎯 Mission · Day 12
 
-**Level up your code quality** ✨
+<div align="center">
 
-- [ ] 📖 Refactor an old project using clean code principles
-- [ ] 🧪 Write unit tests for at least 3 functions
-- [ ] 🔧 Set up ESLint/Pylint in a project
-- [ ] 🎨 Configure Prettier/Black for auto-formatting
-- [ ] 👥 Do a code review on a colleague's PR
-- [ ] 📊 Achieve 80%+ test coverage on a module
+### ✨ Level up your code quality
 
-### Bonus Challenge ⭐
+</div>
 
-- [ ] Practice TDD: Write tests before code
-- [ ] Set up pre-commit hooks for linting
-- [ ] Implement CI tests in GitHub Actions
-- [ ] Refactor a complex function using extract method
-- [ ] Write integration tests for an API
-- [ ] Document your code with JSDoc/docstrings
-- [ ] Measure and improve code complexity metrics
+<br>
+
+### Core Tasks:
+
+- [ ] 📖 **Refactor an old project** — Apply clean code principles
+- [ ] 🧪 **Write unit tests** — At least 3 functions
+- [ ] 🔧 **Set up linting** — ESLint/Pylint in a project
+- [ ] 🎨 **Configure formatting** — Prettier/Black for auto-format
+- [ ] 👥 **Code review** — Review a colleague's PR
+- [ ] 📊 **Test coverage** — Achieve 80%+ on a module
+
+<br>
+
+<details>
+<summary><b>⭐ Bonus Challenges</b></summary>
+
+<br>
+
+- [ ] 🔴 Practice TDD: Write tests before code
+- [ ] 🪝 Set up pre-commit hooks for linting
+- [ ] 🚀 Implement CI tests in GitHub Actions
+- [ ] 🏗️ Refactor a complex function using extract method
+- [ ] 🔌 Write integration tests for an API
+- [ ] 📚 Document your code with JSDoc/docstrings
+- [ ] 📈 Measure and improve code complexity metrics
+
+</details>
 
 ---
+
+<br>
 
 ## 📚 Code Quality Checklist
 
-### Before Committing
+<div align="center">
 
-- [ ] ✅ Code follows naming conventions
-- [ ] ✅ Functions are small and focused
-- [ ] ✅ No magic numbers or hardcoded values
-- [ ] ✅ DRY principle applied
-- [ ] ✅ Tests written and passing
-- [ ] ✅ Code formatted (Prettier/Black)
-- [ ] ✅ Linter passes with no errors
-- [ ] ✅ No commented-out code
-- [ ] ✅ Complex logic has comments explaining WHY
-- [ ] ✅ Error handling implemented
+### Before Committing:
+
+</div>
+
+<br>
+
+| ✅ | Checklist Item |
+|:---:|:---|
+| ☑️ | Code follows naming conventions |
+| ☑️ | Functions are small and focused |
+| ☑️ | No magic numbers or hardcoded values |
+| ☑️ | DRY principle applied |
+| ☑️ | Tests written and passing |
+| ☑️ | Code formatted (Prettier/Black) |
+| ☑️ | Linter passes with no errors |
+| ☑️ | No commented-out code |
+| ☑️ | Complex logic has comments explaining WHY |
+| ☑️ | Error handling implemented |
 
 ---
+
+<br>
 
 <div align="center">
 
 ## 🏆 Achievement Unlocked
 
-### *"The Craftsperson"*
+### **The Craftsperson**
+
+<br>
 
 **You now understand:**
 - Clean code principles
@@ -870,17 +1604,35 @@ greet(42); // ❌ Error: Argument of type 'number' is not assignable
 - Code review best practices
 - Quality tooling
 
-You're no longer just writing code.  
+<br>
+
+*You're no longer just writing code.*  
 **You're crafting maintainable software.**
 
+<br>
+
+![Achievement](https://img.shields.io/badge/🏆-Achievement_Unlocked-gold?style=for-the-badge)
+
+</div>
+
 ---
+
+<br>
+
+<div align="center">
 
 ### 🎓 Pro Tip
 
 > "Leave the code better than you found it.  
 > The Boy Scout Rule applies to programming too."
 
+</div>
+
 ---
+
+<br>
+
+<div align="center">
 
 ### ✨ Remember
 
@@ -888,8 +1640,10 @@ You're no longer just writing code.
 **Write for the humans who will maintain it,**  
 **not for the computer that will execute it.**
 
----
+<br>
 
-➡️ [Continue to Chapter 13 · Habits & Growth](./13-habits-&-growth.md)
+[![Continue](https://img.shields.io/badge/➡️_Continue_to_Chapter_13-Habits_&_Growth-success?style=for-the-badge)](./13-habits-&-growth.md)
 
 </div>
+
+<br>
