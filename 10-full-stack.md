@@ -2,30 +2,96 @@
 
 # 🌟 Chapter 10 · Full-Stack
 
-### Integration · Deployment · Production Ready
+![Full-Stack](https://img.shields.io/badge/Full--Stack-Deployment-blueviolet?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Production-success?style=for-the-badge)
+![Level](https://img.shields.io/badge/Level-Ship_Captain-orange?style=for-the-badge)
 
-![Full-Stack](https://media.giphy.com/media/L1R1tvI9svkIWwpVYr/giphy.gif)
+### *Integration · Deployment · Production Ready*
 
-> *"Full-stack developers don't just build apps. They ship them to the world."*
-
-[🔙 Back to Chapter 09](./09-front-end-dev.md) • [Next Chapter 🔜](./11-AI-integration.md)
+<img src="https://media.giphy.com/media/L1R1tvI9svkIWwpVYr/giphy.gif" width="500">
 
 </div>
 
 ---
 
+> [!NOTE]
+> *"Full-stack developers don't just build apps. They ship them to the world."*
+
+<div align="center">
+
+[![Back to Chapter 09](https://img.shields.io/badge/🔙-Chapter_09-blue?style=flat-square)](./09-front-end-dev.md)
+[![Next Chapter](https://img.shields.io/badge/Chapter_11-🔜-green?style=flat-square)](./11-AI-integration.md)
+
+</div>
+
+<br>
+
 ## 🎯 What Is Full-Stack?
+
+<div align="center">
 
 A **full-stack developer** can work on both:
 
-| 🎨 Frontend | ⚙️ Backend |
-|-------------|-----------|
-| User interface | Server logic |
-| Client-side code | Database design |
-| React, Vue, Angular | Node.js, Django, Flask |
-| What users interact with | What powers the app |
+</div>
+
+<br>
+
+<table>
+<tr>
+<td width="50%" align="center" bgcolor="#e3f2fd">
+
+### 🎨 Frontend
+
+User interface  
+Client-side code  
+React, Vue, Angular  
+What users interact with
+
+</td>
+<td width="50%" align="center" bgcolor="#f3e5f5">
+
+### ⚙️ Backend
+
+Server logic  
+Database design  
+Node.js, Django, Flask  
+What powers the app
+
+</td>
+</tr>
+</table>
+
+---
+
+<br>
 
 ### 🧠 The Complete Picture
+
+<br>
+
+<div align="center">
+
+```mermaid
+graph TD
+    A[👤 User's Browser] --> B[🎨 Frontend React/Vue]
+    B -->|HTTP Requests| C[🔌 API Layer REST/GraphQL]
+    C --> D[⚙️ Backend Node.js/Django]
+    D --> E[🗄️ Database PostgreSQL/MongoDB]
+    E -->|Data| D
+    D -->|Response| C
+    C -->|JSON| B
+    B -->|Render| A
+    
+    style A fill:#e3f2fd
+    style B fill:#f3e5f5
+    style C fill:#fff9c4
+    style D fill:#c8e6c9
+    style E fill:#ffccbc
+```
+
+</div>
+
+<br>
 
 ```
 ┌─────────────────────────────────────────────┐
@@ -44,20 +110,37 @@ A **full-stack developer** can work on both:
 └─────────────────────────────────────────────┘
 ```
 
-> 💡 **Full-stack means understanding the entire flow, from click to database and back.**
+<br>
+
+> [!IMPORTANT]
+> **Full-stack means understanding the entire flow, from click to database and back.**
 
 ---
 
+<br>
+
 ## 🔗 Part 1 · Connecting Frontend to Backend
+
+<div align="center">
 
 ### *Making Them Talk*
 
 Your frontend needs to communicate with your backend API.
 
+</div>
+
+<br>
+
 ### 📡 Using Fetch API (Vanilla JS)
 
+<br>
+
+<details>
+<summary><b>🔍 GET Request Example</b></summary>
+
+<br>
+
 ```javascript
-// GET request
 async function getUsers() {
   try {
     const response = await fetch('http://localhost:3000/api/users');
@@ -67,8 +150,16 @@ async function getUsers() {
     console.error('Error:', error);
   }
 }
+```
 
-// POST request
+</details>
+
+<details>
+<summary><b>📝 POST Request Example</b></summary>
+
+<br>
+
+```javascript
 async function createUser(userData) {
   try {
     const response = await fetch('http://localhost:3000/api/users', {
@@ -89,7 +180,20 @@ async function createUser(userData) {
 createUser({ name: 'Alice', email: 'alice@email.com' });
 ```
 
+</details>
+
+---
+
+<br>
+
 ### 📡 Using Axios (More Features)
+
+<br>
+
+<details>
+<summary><b>⚙️ Axios Configuration & Usage</b></summary>
+
+<br>
 
 ```javascript
 import axios from 'axios';
@@ -124,7 +228,20 @@ async function createUser(userData) {
 api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
 ```
 
+</details>
+
+---
+
+<br>
+
 ### ⚛️ React Integration Example
+
+<br>
+
+<details>
+<summary><b>📋 Complete React Component with API</b></summary>
+
+<br>
 
 ```javascript
 import { useState, useEffect } from 'react';
@@ -180,7 +297,20 @@ function UserList() {
 export default UserList;
 ```
 
+</details>
+
+---
+
+<br>
+
 ### 🔒 Handling Authentication
+
+<br>
+
+<details>
+<summary><b>🔐 Complete Authentication Flow</b></summary>
+
+<br>
 
 ```javascript
 // Login and store token
@@ -219,14 +349,30 @@ useEffect(() => {
 }, []);
 ```
 
+</details>
+
+---
+
+<br>
+
 ### 🌐 CORS (Cross-Origin Resource Sharing)
 
-**Problem:** Browser blocks requests from different origins.
+<br>
 
-**Solution:** Enable CORS on your backend.
+> [!WARNING]
+> **Problem:** Browser blocks requests from different origins.
+
+> [!TIP]
+> **Solution:** Enable CORS on your backend.
+
+<br>
+
+<details>
+<summary><b>🟨 Node.js/Express CORS Setup</b></summary>
+
+<br>
 
 ```javascript
-// Node.js/Express
 const cors = require('cors');
 
 // Allow all origins (development only)
@@ -239,8 +385,14 @@ app.use(cors({
 }));
 ```
 
+</details>
+
+<details>
+<summary><b>🐍 Django CORS Setup</b></summary>
+
+<br>
+
 ```python
-# Django
 INSTALLED_APPS = [
     'corsheaders',
 ]
@@ -256,50 +408,99 @@ CORS_ALLOWED_ORIGINS = [
 ]
 ```
 
+</details>
+
 ---
 
+<br>
+
 ## 🚀 Part 2 · Deployment Basics
+
+<div align="center">
 
 ### *From Localhost to the World*
 
 **Deployment** = Making your app accessible on the internet.
 
+</div>
+
+<br>
+
 ### 🎯 Deployment Checklist
 
-Before deploying, ensure:
+<br>
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+#### 📋 Before Deploying:
 
 - [ ] Environment variables configured
 - [ ] Database connection secured
 - [ ] Error handling implemented
 - [ ] CORS configured properly
+
+</td>
+<td width="50%" valign="top">
+
+#### 🔒 Security & Performance:
+
 - [ ] HTTPS enabled
 - [ ] Sensitive data removed from code
 - [ ] Production build created
 - [ ] Database migrations ready
 
-### 🌍 Deployment Options
-
-| Platform | Best For | Free Tier | Language Support |
-|----------|----------|-----------|------------------|
-| **Vercel** | Frontend, Next.js | ✅ Yes | JS/TS, Python |
-| **Netlify** | Static sites, JAMstack | ✅ Yes | JS/TS |
-| **Railway** | Full-stack apps | ✅ Limited | All |
-| **Render** | Backend APIs | ✅ Limited | All |
-| **Heroku** | Full-stack (legacy) | ❌ No longer free | All |
-| **AWS** | Enterprise scale | ⚠️ Complex pricing | All |
-| **DigitalOcean** | VPS hosting | ❌ Paid | All |
+</td>
+</tr>
+</table>
 
 ---
 
+<br>
+
+### 🌍 Deployment Options
+
+<br>
+
+<div align="center">
+
+| Platform | Best For | Free Tier | Language Support |
+|:---:|:---:|:---:|:---|
+| **▲ Vercel** | Frontend, Next.js | ✅ Yes | JS/TS, Python |
+| **🟢 Netlify** | Static sites, JAMstack | ✅ Yes | JS/TS |
+| **🟣 Railway** | Full-stack apps | ✅ Limited | All |
+| **🔵 Render** | Backend APIs | ✅ Limited | All |
+| **🟣 Heroku** | Full-stack (legacy) | ❌ No longer free | All |
+| **🟠 AWS** | Enterprise scale | ⚠️ Complex pricing | All |
+| **🔵 DigitalOcean** | VPS hosting | ❌ Paid | All |
+
+</div>
+
+---
+
+<br>
+
 ## ▲ Part 3 · Deploying to Vercel
+
+<div align="center">
 
 ### *Perfect for Frontend & Next.js*
 
 **Vercel** specializes in frontend deployments with zero config.
 
+</div>
+
+<br>
+
 ### 🎯 Frontend Deployment (React/Vue)
 
-#### Step 1: Prepare Your Project
+<br>
+
+<details>
+<summary><b>📦 Step 1: Prepare Your Project</b></summary>
+
+<br>
 
 ```bash
 # Create production build
@@ -309,7 +510,12 @@ npm run build
 npm run preview  # or serve -s build
 ```
 
-#### Step 2: Create `vercel.json` (Optional)
+</details>
+
+<details>
+<summary><b>⚙️ Step 2: Create vercel.json (Optional)</b></summary>
+
+<br>
 
 ```json
 {
@@ -319,7 +525,12 @@ npm run preview  # or serve -s build
 }
 ```
 
-#### Step 3: Deploy
+</details>
+
+<details>
+<summary><b>🚀 Step 3: Deploy</b></summary>
+
+<br>
 
 ```bash
 # Install Vercel CLI
@@ -335,7 +546,20 @@ vercel
 vercel --prod
 ```
 
+</details>
+
+---
+
+<br>
+
 ### 🔧 Environment Variables on Vercel
+
+<br>
+
+<details>
+<summary><b>🔐 Setting Up Environment Variables</b></summary>
+
+<br>
 
 ```bash
 # In your project root
@@ -350,7 +574,20 @@ VITE_API_KEY=your-secret-key
 3. Add each variable
 4. Redeploy
 
+</details>
+
+---
+
+<br>
+
 ### ⚡ Full-Stack with Vercel (Serverless Functions)
+
+<br>
+
+<details>
+<summary><b>🔌 API Route Example</b></summary>
+
+<br>
 
 ```javascript
 // api/users.js
@@ -370,17 +607,32 @@ export default async function handler(req, res) {
 
 **Access at:** `https://yourapp.vercel.app/api/users`
 
+</details>
+
 ---
 
+<br>
+
 ## 🟣 Part 4 · Deploying to Railway
+
+<div align="center">
 
 ### *Modern Heroku Alternative*
 
 **Railway** is great for full-stack apps with databases.
 
+</div>
+
+<br>
+
 ### 🚂 Deploying Backend (Node.js)
 
-#### Step 1: Prepare Your App
+<br>
+
+<details>
+<summary><b>📦 Step 1: Prepare Your App</b></summary>
+
+<br>
 
 ```json
 // package.json
@@ -395,7 +647,12 @@ export default async function handler(req, res) {
 }
 ```
 
-#### Step 2: Create `railway.toml` (Optional)
+</details>
+
+<details>
+<summary><b>⚙️ Step 2: Create railway.toml (Optional)</b></summary>
+
+<br>
 
 ```toml
 [build]
@@ -407,7 +664,12 @@ restartPolicyType = "ON_FAILURE"
 restartPolicyMaxRetries = 10
 ```
 
-#### Step 3: Deploy with GitHub
+</details>
+
+<details>
+<summary><b>🚀 Step 3: Deploy with GitHub</b></summary>
+
+<br>
 
 1. Push code to GitHub
 2. Go to [railway.app](https://railway.app)
@@ -416,7 +678,20 @@ restartPolicyMaxRetries = 10
 5. Choose your repository
 6. Railway auto-detects and deploys
 
+</details>
+
+---
+
+<br>
+
 ### 🗄️ Add Database (PostgreSQL)
+
+<br>
+
+<details>
+<summary><b>💾 Database Setup on Railway</b></summary>
+
+<br>
 
 1. In Railway dashboard, click "New"
 2. Select "Database" → "PostgreSQL"
@@ -427,7 +702,20 @@ restartPolicyMaxRetries = 10
 DATABASE_URL=postgresql://user:password@host:5432/database
 ```
 
+</details>
+
+---
+
+<br>
+
 ### 🔧 Environment Variables
+
+<br>
+
+<details>
+<summary><b>🔐 Configuration Example</b></summary>
+
+<br>
 
 ```javascript
 // server.js
@@ -444,17 +732,32 @@ app.listen(PORT, () => {
 - Go to "Variables" tab
 - Add each variable
 
+</details>
+
 ---
 
+<br>
+
 ## 🔵 Part 5 · Deploying to Render
+
+<div align="center">
 
 ### *Great for Backend APIs*
 
 **Render** offers free tier for web services and databases.
 
+</div>
+
+<br>
+
 ### 🌐 Deploy Web Service
 
-#### Step 1: Create `render.yaml`
+<br>
+
+<details>
+<summary><b>⚙️ Step 1: Create render.yaml</b></summary>
+
+<br>
 
 ```yaml
 services:
@@ -477,7 +780,12 @@ databases:
     user: myappuser
 ```
 
-#### Step 2: Deploy
+</details>
+
+<details>
+<summary><b>🚀 Step 2: Deploy</b></summary>
+
+<br>
 
 1. Connect GitHub repository
 2. Render auto-detects language
@@ -485,7 +793,20 @@ databases:
 4. Configure start command: `npm start`
 5. Click "Create Web Service"
 
+</details>
+
+---
+
+<br>
+
 ### 🔒 Health Checks
+
+<br>
+
+<details>
+<summary><b>💓 Health Check Implementation</b></summary>
+
+<br>
 
 ```javascript
 // Add health check endpoint
@@ -497,11 +818,24 @@ app.get('/health', (req, res) => {
 Configure in Render:
 - Health Check Path: `/health`
 
+</details>
+
 ---
+
+<br>
 
 ## 🌍 Part 6 · Full-Stack Deployment Strategy
 
+<br>
+
 ### 🎯 Monorepo Approach
+
+<br>
+
+<details>
+<summary><b>📁 Project Structure</b></summary>
+
+<br>
 
 ```
 my-fullstack-app/
@@ -518,19 +852,55 @@ my-fullstack-app/
 - Frontend → Vercel
 - Backend → Railway/Render
 
+</details>
+
+---
+
+<br>
+
 ### 🎯 Separate Repos Approach
 
-```
-my-app-frontend/       # Deployed to Vercel
-my-app-backend/        # Deployed to Railway
-```
+<br>
 
-**Advantages:**
+<table>
+<tr>
+<td width="50%" align="center" bgcolor="#e8f5e9">
+
+### ✅ Advantages:
+
 - Independent deployments
 - Different teams can work separately
 - Better scaling options
 
+</td>
+<td width="50%" align="center" bgcolor="#e3f2fd">
+
+### 📂 Repos:
+
+```
+my-app-frontend/
+→ Deployed to Vercel
+
+my-app-backend/
+→ Deployed to Railway
+```
+
+</td>
+</tr>
+</table>
+
+---
+
+<br>
+
 ### 🔗 Connecting Frontend to Backend
+
+<br>
+
+<details>
+<summary><b>🔌 Environment Configuration</b></summary>
+
+<br>
 
 ```javascript
 // frontend/.env.production
@@ -542,15 +912,32 @@ const API_URL = import.meta.env.VITE_API_URL;
 axios.get(`${API_URL}/api/users`);
 ```
 
+</details>
+
 ---
 
+<br>
+
 ## 🔄 Part 7 · CI/CD Basics
+
+<div align="center">
 
 ### *Continuous Integration / Continuous Deployment*
 
 **Automate** your deployment process.
 
+</div>
+
+<br>
+
 ### 🎯 GitHub Actions Example
+
+<br>
+
+<details>
+<summary><b>⚙️ Complete CI/CD Workflow</b></summary>
+
+<br>
 
 ```yaml
 # .github/workflows/deploy.yml
@@ -585,19 +972,77 @@ jobs:
         run: vercel --prod --token ${{ secrets.VERCEL_TOKEN }}
 ```
 
-### ✅ Benefits of CI/CD
-
-- 🤖 Automatic deployments on push
-- 🧪 Run tests before deploying
-- 🚫 Prevent broken code in production
-- 📊 Track deployment history
-- ⏱️ Save time and reduce errors
+</details>
 
 ---
 
+<br>
+
+### ✅ Benefits of CI/CD
+
+<br>
+
+<table>
+<tr>
+<td align="center" width="20%">
+
+🤖  
+**Automatic**
+
+Deployments on push
+
+</td>
+<td align="center" width="20%">
+
+🧪  
+**Testing**
+
+Run tests before deploy
+
+</td>
+<td align="center" width="20%">
+
+🚫  
+**Prevention**
+
+No broken code in prod
+
+</td>
+<td align="center" width="20%">
+
+📊  
+**Tracking**
+
+Deployment history
+
+</td>
+<td align="center" width="20%">
+
+⏱️  
+**Time Saving**
+
+Reduce errors
+
+</td>
+</tr>
+</table>
+
+---
+
+<br>
+
 ## 🛡️ Part 8 · Production Best Practices
 
+<br>
+
 ### 🔒 Security
+
+<br>
+
+<details>
+<summary><b>🔐 Environment Variables & Security</b></summary>
+
+<br>
 
 ```javascript
 // Use environment variables
@@ -611,7 +1056,20 @@ const DB_PASSWORD = process.env.DB_PASSWORD;
 .env.production
 ```
 
+</details>
+
+---
+
+<br>
+
 ### ⚡ Performance
+
+<br>
+
+<details>
+<summary><b>🚀 Performance Optimization</b></summary>
+
+<br>
 
 ```javascript
 // Enable compression
@@ -628,7 +1086,20 @@ app.use(express.static('public', {
 const CDN_URL = process.env.CDN_URL;
 ```
 
+</details>
+
+---
+
+<br>
+
 ### 📊 Monitoring & Logging
+
+<br>
+
+<details>
+<summary><b>📈 Error Logging & Monitoring</b></summary>
+
+<br>
 
 ```javascript
 // Log errors
@@ -643,11 +1114,27 @@ const morgan = require('morgan');
 app.use(morgan('combined'));
 ```
 
+</details>
+
+---
+
+<br>
+
 ### 🔄 Database Migrations
 
-```bash
-# Always use migrations, never edit DB directly
+<br>
 
+> [!WARNING]
+> Always use migrations, never edit DB directly
+
+<br>
+
+<details>
+<summary><b>💾 Migration Commands</b></summary>
+
+<br>
+
+```bash
 # Create migration
 npm run migrate:create add_users_table
 
@@ -658,110 +1145,232 @@ npm run migrate:up
 npm run migrate:down
 ```
 
+</details>
+
 ---
+
+<br>
 
 ## 🤖 AI Tip · Deployment
 
+<br>
+
 ### ✅ Smart Prompts:
 
-- *"How do I deploy a React app to Vercel?"*
-- *"Configure environment variables for production"*
-- *"Debug CORS error in production"*
-- *"Set up CI/CD pipeline with GitHub Actions"*
-- *"Optimize my app for production deployment"*
+<table>
+<tr>
+<td width="50%">
+
+```
+💡 "How do I deploy a React app to Vercel?"
+```
+```
+💡 "Configure environment variables for production"
+```
+```
+💡 "Debug CORS error in production"
+```
+
+</td>
+<td width="50%">
+
+```
+💡 "Set up CI/CD pipeline with GitHub Actions"
+```
+```
+💡 "Optimize my app for production deployment"
+```
+```
+💡 "Fix database connection issues in production"
+```
+
+</td>
+</tr>
+</table>
+
+<br>
 
 ### 🎯 AI Can Help With:
 
-- Generating deployment configs
-- Troubleshooting deployment errors
-- Environment variable setup
-- Performance optimization
-- Security hardening
+| Area | Application |
+|:---|:---|
+| ✅ Deployment configs | Generate platform-specific configs |
+| ✅ Troubleshooting | Debug deployment errors |
+| ✅ Environment setup | Configure variables properly |
+| ✅ Performance | Optimization recommendations |
+| ✅ Security | Hardening best practices |
 
 ---
+
+<br>
 
 ## 🎯 Mission · Day 10
 
-**Ship your app to production** 🚀
+<div align="center">
 
-- [ ] 🎨 Deploy frontend to Vercel or Netlify
-- [ ] ⚙️ Deploy backend to Railway or Render
-- [ ] 🗄️ Set up a production database
-- [ ] 🔗 Connect frontend to deployed backend
-- [ ] 🔒 Configure environment variables properly
-- [ ] 🧪 Test all functionality in production
-- [ ] 🌍 Share your live app URL!
+### 🚀 Ship your app to production
 
-### Bonus Challenge ⭐
+</div>
 
-- [ ] Set up custom domain
-- [ ] Implement CI/CD with GitHub Actions
-- [ ] Add monitoring (Sentry, LogRocket)
-- [ ] Configure SSL/HTTPS
-- [ ] Optimize for performance (Lighthouse score > 90)
-- [ ] Set up staging and production environments
-- [ ] Implement automated backups
+<br>
+
+### Core Tasks:
+
+- [ ] 🎨 **Deploy frontend** — Vercel or Netlify
+- [ ] ⚙️ **Deploy backend** — Railway or Render
+- [ ] 🗄️ **Set up production database** — PostgreSQL/MongoDB
+- [ ] 🔗 **Connect frontend to backend** — Test integration
+- [ ] 🔒 **Configure environment variables** — All platforms
+- [ ] 🧪 **Test in production** — All functionality works
+- [ ] 🌍 **Share your live app URL** — Celebrate! 🎉
+
+<br>
+
+<details>
+<summary><b>⭐ Bonus Challenges</b></summary>
+
+<br>
+
+- [ ] 🌐 Set up custom domain
+- [ ] 🔄 Implement CI/CD with GitHub Actions
+- [ ] 📊 Add monitoring (Sentry, LogRocket)
+- [ ] 🔒 Configure SSL/HTTPS
+- [ ] ⚡ Optimize for performance (Lighthouse > 90)
+- [ ] 🎭 Set up staging and production environments
+- [ ] 💾 Implement automated backups
+
+</details>
 
 ---
+
+<br>
 
 ## 📚 Deployment Checklist
 
-### Before Going Live
+<div align="center">
 
-- [ ] ✅ All tests passing
-- [ ] ✅ Environment variables configured
-- [ ] ✅ Database backed up
-- [ ] ✅ Error handling in place
-- [ ] ✅ Security headers configured
-- [ ] ✅ CORS properly set up
-- [ ] ✅ API rate limiting enabled
-- [ ] ✅ Logging implemented
-- [ ] ✅ Performance optimized
-- [ ] ✅ Mobile responsive
-- [ ] ✅ Accessibility tested
-- [ ] ✅ SEO meta tags added
-- [ ] ✅ Analytics set up
-- [ ] ✅ Documentation updated
+### Before Going Live:
+
+</div>
+
+<br>
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+#### ✅ Development:
+
+- [ ] All tests passing
+- [ ] Environment variables configured
+- [ ] Database backed up
+- [ ] Error handling in place
+- [ ] Security headers configured
+- [ ] CORS properly set up
+- [ ] API rate limiting enabled
+
+</td>
+<td width="50%" valign="top">
+
+#### ✅ Production:
+
+- [ ] Logging implemented
+- [ ] Performance optimized
+- [ ] Mobile responsive
+- [ ] Accessibility tested
+- [ ] SEO meta tags added
+- [ ] Analytics set up
+- [ ] Documentation updated
+
+</td>
+</tr>
+</table>
 
 ---
 
+<br>
+
 ## 🆘 Common Deployment Issues
+
+<br>
 
 ### Problem: "CORS Error in Production"
 
-```javascript
-// ❌ Wrong
-app.use(cors({ origin: 'http://localhost:3000' }));
+<br>
 
-// ✅ Correct
+<table>
+<tr>
+<td width="50%" bgcolor="#ffebee" valign="top">
+
+#### ❌ Wrong:
+
+```javascript
+app.use(cors({ 
+  origin: 'http://localhost:3000' 
+}));
+```
+
+</td>
+<td width="50%" bgcolor="#e8f5e9" valign="top">
+
+#### ✅ Correct:
+
+```javascript
 app.use(cors({ 
   origin: process.env.FRONTEND_URL 
 }));
 ```
 
+</td>
+</tr>
+</table>
+
+---
+
+<br>
+
 ### Problem: "Environment Variables Not Working"
 
-- Make sure variable names match exactly
-- Rebuild after adding variables
-- Use correct prefix (VITE_, REACT_APP_, etc.)
+<br>
+
+> [!TIP]
+> - Make sure variable names match exactly
+> - Rebuild after adding variables
+> - Use correct prefix (VITE_, REACT_APP_, etc.)
+
+---
+
+<br>
 
 ### Problem: "Database Connection Failed"
 
+<br>
+
+<details>
+<summary><b>🔧 Solution: Use Connection Pooling</b></summary>
+
+<br>
+
 ```javascript
-// Use connection pooling
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
   ssl: { rejectUnauthorized: false } // For production DBs
 });
 ```
 
+</details>
+
 ---
+
+<br>
 
 <div align="center">
 
 ## 🏆 Achievement Unlocked
 
-### *"The Ship Captain"*
+### **The Ship Captain**
+
+<br>
 
 **You now understand:**
 - Frontend-Backend integration
@@ -770,10 +1379,22 @@ const pool = new Pool({
 - CI/CD automation
 - Production best practices
 
-You're no longer just building apps.  
+<br>
+
+*You're no longer just building apps.*  
 **You're shipping products to real users.**
 
+<br>
+
+![Achievement](https://img.shields.io/badge/🏆-Achievement_Unlocked-gold?style=for-the-badge)
+
+</div>
+
 ---
+
+<br>
+
+<div align="center">
 
 ### 🎓 Pro Tip
 
@@ -781,7 +1402,13 @@ You're no longer just building apps.
 > Ship your MVP, get feedback, iterate.  
 > Every deployed app is a learning opportunity."
 
+</div>
+
 ---
+
+<br>
+
+<div align="center">
 
 ### 🌟 Congratulations!
 
@@ -790,8 +1417,10 @@ You now have the skills to build and deploy complete applications.
 
 **What's next?** Specialize, build projects, and never stop learning.
 
----
+<br>
 
-➡️ [Continue to Chapter 11 · AI Integration](./11-AI-integration.md)
+[![Continue](https://img.shields.io/badge/➡️_Continue_to_Chapter_11-AI_Integration-success?style=for-the-badge)](./11-AI-integration.md)
 
 </div>
+
+<br>
