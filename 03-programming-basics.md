@@ -20,7 +20,7 @@
 <div align="center">
 
 [![Back to Chapter 02](https://img.shields.io/badge/🔙-Chapter_02-blue?style=flat-square)](./02-environment-setup.md)
-[![Next Chapter](https://img.shields.io/badge/Chapter_04-🔜-green?style=flat-square)](./04-data-structures.md)
+[![Next Chapter](https://img.shields.io/badge/Next_Chapter-🔜-green?style=flat-square)](./04-data-structures.md)
 
 </div>
 
