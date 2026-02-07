@@ -20,7 +20,7 @@
 <div align="center">
 
 [![Back to Chapter 06](https://img.shields.io/badge/🔙-Chapter_06-blue?style=flat-square)](./06-web-dev-basics.md)
-[![Next Chapter](https://img.shields.io/badge/Chapter_08-🔜-green?style=flat-square)](./08-backend-dev.md)
+[![Next Chapter](https://img.shields.io/badge/Next_Chapter-🔜-green?style=flat-square)](./08-backend-dev.md)
 
 </div>
 
