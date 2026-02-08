@@ -18,7 +18,7 @@
 <div align="center">
 
 [![Back to Chapter 12](https://img.shields.io/badge/🔙-Chapter_12-blue?style=flat-square)](./12-code-quality.md)
-[![Next Chapter](https://img.shields.io/badge/Chapter_14-🔜-green?style=flat-square)](./14-projects.md)
+[![Next Chapter](https://img.shields.io/badge/Next_Chapter-🔜-green?style=flat-square)](./14-projects.md)
 
 </div>
 
