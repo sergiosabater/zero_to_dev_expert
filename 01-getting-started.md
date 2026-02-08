@@ -22,7 +22,7 @@
 <div align="center">
 
 [![Back to Roadmap](https://img.shields.io/badge/🔙-Roadmap-blue?style=flat-square)](../README.md)
-[![Next Chapter](https://img.shields.io/badge/Chapter_02-🔜-green?style=flat-square)](./02-environment-setup.md)
+[![Next Chapter](https://img.shields.io/badge/Next_Chapter-🔜-green?style=flat-square)](./02-environment-setup.md)
 
 </div>
 
