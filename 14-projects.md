@@ -18,7 +18,7 @@
 <div align="center">
 
 [![Back to Chapter 13](https://img.shields.io/badge/🔙-Chapter_13-blue?style=flat-square)](./13-habits-&-growth.md)
-[![Next Chapter](https://img.shields.io/badge/Chapter_15-🔜-green?style=flat-square)](./15-career-launch.md)
+[![Next Chapter](https://img.shields.io/badge/Next_Chapter-🔜-green?style=flat-square)](./15-career-launch.md)
 
 </div>
 
